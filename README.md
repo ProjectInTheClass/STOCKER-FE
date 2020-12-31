@@ -1,7 +1,7 @@
-# 2020 동국대학교 IOS 앱 개발 프로젝트 FE Repository
+# 📈STOCKER FE Repository
 
 <p align="center" width="100%">
-  <img width="200px" src="https://user-images.githubusercontent.com/46745325/103060932-0649d600-45ed-11eb-84d8-9ceb0ad6b931.png"></img>
+  <img src="https://user-images.githubusercontent.com/46745325/103398279-5beb2900-4b7f-11eb-82bf-b28d2ad8532c.png"></img>
 </p>
 
 원영 : 🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕
