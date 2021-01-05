@@ -9,6 +9,8 @@ import UIKit
 
 class DataController: UIViewController {
 
+    @IBOutlet weak var dataTableView: UITableView!
+    	
     override func viewDidLoad() {
         super.viewDidLoad()
 
