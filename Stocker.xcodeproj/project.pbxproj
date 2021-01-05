@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401174D525A4526500007150 /* cumRevenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401174D425A4526500007150 /* cumRevenueVC.swift */; };
 		BD627DC825A4476000DCB0B4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD627DC725A4476000DCB0B4 /* HomeController.swift */; };
 		BD627DCB25A4477000DCB0B4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD627DCA25A4477000DCB0B4 /* DataController.swift */; };
 		BD627DCF25A4488100DCB0B4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD627DCE25A4488100DCB0B4 /* API.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		401174D425A4526500007150 /* cumRevenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cumRevenueVC.swift; sourceTree = "<group>"; };
 		BD627DC725A4476000DCB0B4 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BD627DCA25A4477000DCB0B4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BD627DCE25A4488100DCB0B4 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				BD627DDA25A44BF200DCB0B4 /* tVC.swift */,
+				401174D425A4526500007150 /* cumRevenueVC.swift */,
 			);
 			path = DataTab;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				EF6FC077259DB517001F6889 /* AppDelegate.swift in Sources */,
 				BD627DCF25A4488100DCB0B4 /* API.swift in Sources */,
 				BD627DDF25A44C0000DCB0B4 /* tVC2.swift in Sources */,
+				401174D525A4526500007150 /* cumRevenueVC.swift in Sources */,
 				BD627DDB25A44BF200DCB0B4 /* tVC.swift in Sources */,
 				EF6FC079259DB517001F6889 /* SceneDelegate.swift in Sources */,
 			);
