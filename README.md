@@ -7,3 +7,5 @@
 ### 필독🔥🔥🔥 [IOS 개발 규칙](https://github.com/Himelo/IOS-Project-Rules)
 
 원영 : 🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕
+
+태민 : 수정
