@@ -41,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD0F8B9425A445BC00EA93A3 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BDE47B7B259DB64E009B1EB3 /* Home.storyboard */,
+				BDE47B80259DB94E009B1EB3 /* Data.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		EF6FC06A259DB517001F6889 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +69,7 @@
 		EF6FC075259DB517001F6889 /* Stocker */ = {
 			isa = PBXGroup;
 			children = (
+				BD0F8B9425A445BC00EA93A3 /* storyboard */,
 				EF6FC076259DB517001F6889 /* AppDelegate.swift */,
 				EF6FC078259DB517001F6889 /* SceneDelegate.swift */,
 				EF6FC07A259DB517001F6889 /* ViewController.swift */,
@@ -67,8 +77,6 @@
 				EF6FC07F259DB518001F6889 /* Assets.xcassets */,
 				EF6FC081259DB518001F6889 /* LaunchScreen.storyboard */,
 				EF6FC084259DB518001F6889 /* Info.plist */,
-				BDE47B7B259DB64E009B1EB3 /* Home.storyboard */,
-				BDE47B80259DB94E009B1EB3 /* Data.storyboard */,
 			);
 			path = Stocker;
 			sourceTree = "<group>";
