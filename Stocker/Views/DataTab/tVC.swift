@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
+class tVC: UITableViewCell {
+    
+}
