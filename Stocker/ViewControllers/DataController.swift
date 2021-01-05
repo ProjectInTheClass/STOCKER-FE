@@ -7,10 +7,18 @@
 
 import UIKit
 
-class DataController: UIViewController {
-
+class DataController: UIViewController, UITableViewDataSource {
+    
     @IBOutlet weak var dataTableView: UITableView!
-    	
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
