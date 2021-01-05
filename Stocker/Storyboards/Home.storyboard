@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="Vds-eK-0KI">
             <objects>
-                <viewController storyboardIdentifier="Home" id="Xk2-IX-981" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="Xk2-IX-981" customClass="HomeController" customModule="Stocker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKE-kc-aBw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

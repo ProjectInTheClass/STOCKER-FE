@@ -11,7 +11,7 @@
         <!--Data-->
         <scene sceneID="5Tc-1g-nFv">
             <objects>
-                <viewController storyboardIdentifier="Data" id="NNo-61-BwT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Data" id="NNo-61-BwT" customClass="DataController" customModule="Stocker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhF-A4-xIH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
