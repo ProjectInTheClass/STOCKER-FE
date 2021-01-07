@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171FA50941E4155D8C9CDECB /* Pods_ExForWony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFC07D685E8683F2FA30C19 /* Pods_ExForWony.framework */; };
 		EF10128A25A5CDFE00C93C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10128925A5CDFE00C93C6A /* AppDelegate.swift */; };
 		EF10128C25A5CDFE00C93C6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10128B25A5CDFE00C93C6A /* SceneDelegate.swift */; };
 		EF10128E25A5CDFE00C93C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10128D25A5CDFE00C93C6A /* ViewController.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EFC07D685E8683F2FA30C19 /* Pods_ExForWony.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExForWony.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39F9BB1C986C900D3BE71B6A /* Pods-ExForWony.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExForWony.debug.xcconfig"; path = "Target Support Files/Pods-ExForWony/Pods-ExForWony.debug.xcconfig"; sourceTree = "<group>"; };
+		D42B48539D6227602F35E343 /* Pods-ExForWony.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExForWony.release.xcconfig"; path = "Target Support Files/Pods-ExForWony/Pods-ExForWony.release.xcconfig"; sourceTree = "<group>"; };
 		EF10128625A5CDFE00C93C6A /* ExForWony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExForWony.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF10128925A5CDFE00C93C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF10128B25A5CDFE00C93C6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171FA50941E4155D8C9CDECB /* Pods_ExForWony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C20CFD3661AF6FD101E5DF30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EFC07D685E8683F2FA30C19 /* Pods_ExForWony.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE06FECBF139B75D48346DD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39F9BB1C986C900D3BE71B6A /* Pods-ExForWony.debug.xcconfig */,
+				D42B48539D6227602F35E343 /* Pods-ExForWony.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EF10127D25A5CDFE00C93C6A = {
 			isa = PBXGroup;
 			children = (
 				EF10128825A5CDFE00C93C6A /* ExForWony */,
 				EF10128725A5CDFE00C93C6A /* Products */,
+				EE06FECBF139B75D48346DD4 /* Pods */,
+				C20CFD3661AF6FD101E5DF30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF10129A25A5CDFF00C93C6A /* Build configuration list for PBXNativeTarget "ExForWony" */;
 			buildPhases = (
+				60F1EA2804FB70175428A23C /* [CP] Check Pods Manifest.lock */,
 				EF10128225A5CDFE00C93C6A /* Sources */,
 				EF10128325A5CDFE00C93C6A /* Frameworks */,
 				EF10128425A5CDFE00C93C6A /* Resources */,
+				3ECA45E237537EFC203E64A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +188,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3ECA45E237537EFC203E64A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExForWony/Pods-ExForWony-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExForWony/Pods-ExForWony-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExForWony/Pods-ExForWony-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F1EA2804FB70175428A23C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExForWony-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF10128225A5CDFE00C93C6A /* Sources */ = {
@@ -315,6 +384,7 @@
 		};
 		EF10129B25A5CDFF00C93C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39F9BB1C986C900D3BE71B6A /* Pods-ExForWony.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +404,7 @@
 		};
 		EF10129C25A5CDFF00C93C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D42B48539D6227602F35E343 /* Pods-ExForWony.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
