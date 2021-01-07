@@ -29,7 +29,6 @@ class DataController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            print("여기 옴?")
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! LogoVC
             cell.logoImageView.image = UIImage(named: "Logo")
             return cell
@@ -45,7 +44,8 @@ class DataController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataTableView.dataSource = self
-        
+        dataTableView.estimatedRowHeight = 200
+        dataTableView.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
     }
     
