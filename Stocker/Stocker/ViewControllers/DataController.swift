@@ -11,17 +11,41 @@ class DataController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var dataTableView: UITableView!
     
+    let identifier = ["LogoVC", "CumRevenueVC", "PastDataVC"]
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        3
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        switch section {
+        case 2:
+            return 4
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        if indexPath.section == 0 {
+            print("여기 옴?")
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! LogoVC
+            cell.logoImageView.image = UIImage(named: "Logo")
+            return cell
+        }else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! CumRevenueVC    
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! PastDataVC
+            return cell
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dataTableView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
     
