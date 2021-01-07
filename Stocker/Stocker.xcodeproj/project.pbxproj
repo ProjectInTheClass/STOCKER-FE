@@ -10,6 +10,7 @@
 		40B3D31325A6A2DD00F99C9E /* CumRevenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3D31225A6A2DD00F99C9E /* CumRevenueVC.swift */; };
 		40B3D31725A6A86400F99C9E /* LogoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3D31625A6A86400F99C9E /* LogoVC.swift */; };
 		40B3D31B25A6ACAE00F99C9E /* PastDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3D31A25A6ACAE00F99C9E /* PastDataVC.swift */; };
+		401174D525A4526500007150 /* cumRevenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401174D425A4526500007150 /* cumRevenueVC.swift */; };
 		BD627DC825A4476000DCB0B4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD627DC725A4476000DCB0B4 /* HomeController.swift */; };
 		BD627DCB25A4477000DCB0B4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD627DCA25A4477000DCB0B4 /* DataController.swift */; };
 		BD627DCF25A4488100DCB0B4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD627DCE25A4488100DCB0B4 /* API.swift */; };
@@ -29,6 +30,7 @@
 		40B3D31225A6A2DD00F99C9E /* CumRevenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumRevenueVC.swift; sourceTree = "<group>"; };
 		40B3D31625A6A86400F99C9E /* LogoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVC.swift; sourceTree = "<group>"; };
 		40B3D31A25A6ACAE00F99C9E /* PastDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastDataVC.swift; sourceTree = "<group>"; };
+		401174D425A4526500007150 /* cumRevenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cumRevenueVC.swift; sourceTree = "<group>"; };
 		BD627DC725A4476000DCB0B4 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BD627DCA25A4477000DCB0B4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BD627DCE25A4488100DCB0B4 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
