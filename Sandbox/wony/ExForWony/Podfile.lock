@@ -2,21 +2,25 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - ReSwift (6.0.0)
   - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
   - Charts
+  - ReSwift
   - TinyConstraints
 
 SPEC REPOS:
   trunk:
     - Charts
+    - ReSwift
     - TinyConstraints
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  ReSwift: 14e6f9409fe6bdc635e588208296a01f43b959c9
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: f04def9ebe0b2b788e9c7a790c930667a7fdffec
+PODFILE CHECKSUM: c60665910a47434b6e9cc5e7b669046fc7146ec9
 
 COCOAPODS: 1.9.1
