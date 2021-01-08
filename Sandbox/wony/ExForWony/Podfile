@@ -6,6 +6,7 @@ target 'ExForWony' do
   use_frameworks!
   pod 'Charts'
   pod 'TinyConstraints'
+  pod 'ReSwift'
   # Pods for ExForWony
 
 end
