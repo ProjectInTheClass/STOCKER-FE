@@ -7,11 +7,45 @@
 
 import UIKit
 
-class DataController: UIViewController {
-
+class DataController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var dataTableView: UITableView!
+    
+    let identifier = ["LogoVC", "CumRevenueVC", "PastDataVC"]
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 2:
+            return 4
+        default:
+            return 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! LogoVC
+            cell.logoImageView.image = UIImage(named: "Logo")
+            return cell
+        }else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! CumRevenueVC    
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! PastDataVC
+            return cell
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dataTableView.dataSource = self
+        dataTableView.estimatedRowHeight = 200
+        dataTableView.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
     }
     
