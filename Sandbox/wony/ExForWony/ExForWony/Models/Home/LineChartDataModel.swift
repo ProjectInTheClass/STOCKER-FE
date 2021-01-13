@@ -9,7 +9,7 @@ import Foundation
 import Charts
 import TinyConstraints
 
-class LineChartData {
+class LineChartDatas {
     static let shared = LineChartData()
     
     let yValues: [ChartDataEntry] = [
