@@ -19,8 +19,14 @@
 		EF1012AD25A5D42700C93C6A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1012AC25A5D42700C93C6A /* DataController.swift */; };
 		EF1012B025A5D43300C93C6A /* Data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1012AF25A5D43300C93C6A /* Data.storyboard */; };
 		EF45601C25A841820008B505 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45601B25A841820008B505 /* Test.swift */; };
+		EF6CDEA025AF197E009F546D /* StarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6CDE9F25AF197E009F546D /* StarTableViewCell.swift */; };
+		EF71E0CE25AED16600357EFE /* StockChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0CD25AED16600357EFE /* StockChartData.swift */; };
+		EF71E0D225AED1A500357EFE /* EstimateStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0D125AED1A500357EFE /* EstimateStock.swift */; };
+		EF71E0D525AED1C400357EFE /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0D425AED1C400357EFE /* Stock.swift */; };
+		EF71E0D925AED20A00357EFE /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0D825AED20A00357EFE /* Chart.swift */; };
+		EF71E0DD25AEE2B200357EFE /* ChartTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0DC25AEE2B200357EFE /* ChartTitleTableViewCell.swift */; };
 		EFA9618825A6AE0F00734355 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9618725A6AE0F00734355 /* LineChart.swift */; };
-		EFA9618E25A6AE8100734355 /* LineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9618D25A6AE8100734355 /* LineChartData.swift */; };
+		EFA9618E25A6AE8100734355 /* LineChartDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9618D25A6AE8100734355 /* LineChartDataModel.swift */; };
 		EFA961C425A71F7400734355 /* AppLogoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA961C325A71F7400734355 /* AppLogoTVC.swift */; };
 		EFA961C725A71F9800734355 /* YieldTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA961C625A71F9800734355 /* YieldTVC.swift */; };
 		EFA961CB25A72D7C00734355 /* YieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA961CA25A72D7C00734355 /* YieldView.swift */; };
@@ -43,8 +49,14 @@
 		EF1012AC25A5D42700C93C6A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EF1012AF25A5D43300C93C6A /* Data.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Data.storyboard; sourceTree = "<group>"; };
 		EF45601B25A841820008B505 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		EF6CDE9F25AF197E009F546D /* StarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTableViewCell.swift; sourceTree = "<group>"; };
+		EF71E0CD25AED16600357EFE /* StockChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartData.swift; sourceTree = "<group>"; };
+		EF71E0D125AED1A500357EFE /* EstimateStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateStock.swift; sourceTree = "<group>"; };
+		EF71E0D425AED1C400357EFE /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		EF71E0D825AED20A00357EFE /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		EF71E0DC25AEE2B200357EFE /* ChartTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTitleTableViewCell.swift; sourceTree = "<group>"; };
 		EFA9618725A6AE0F00734355 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
-		EFA9618D25A6AE8100734355 /* LineChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartData.swift; sourceTree = "<group>"; };
+		EFA9618D25A6AE8100734355 /* LineChartDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataModel.swift; sourceTree = "<group>"; };
 		EFA961C325A71F7400734355 /* AppLogoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoTVC.swift; sourceTree = "<group>"; };
 		EFA961C625A71F9800734355 /* YieldTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YieldTVC.swift; sourceTree = "<group>"; };
 		EFA961CA25A72D7C00734355 /* YieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YieldView.swift; sourceTree = "<group>"; };
@@ -100,6 +112,7 @@
 		EF10128825A5CDFE00C93C6A /* ExForWony */ = {
 			isa = PBXGroup;
 			children = (
+				EF71E0D725AED1F800357EFE /* API */,
 				EFA9618B25A6AE3900734355 /* Models */,
 				EFA9618525A6ADE600734355 /* Views */,
 				EF1012A625A5D19E00C93C6A /* ViewController */,
@@ -134,6 +147,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		EF71E0D725AED1F800357EFE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EF71E0D825AED20A00357EFE /* Chart.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		EFA9618525A6ADE600734355 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +183,10 @@
 		EFA9618C25A6AE7100734355 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EFA9618D25A6AE8100734355 /* LineChartData.swift */,
+				EFA9618D25A6AE8100734355 /* LineChartDataModel.swift */,
+				EF71E0CD25AED16600357EFE /* StockChartData.swift */,
+				EF71E0D125AED1A500357EFE /* EstimateStock.swift */,
+				EF71E0D425AED1C400357EFE /* Stock.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -181,6 +205,8 @@
 				EFA961C325A71F7400734355 /* AppLogoTVC.swift */,
 				EFA961C625A71F9800734355 /* YieldTVC.swift */,
 				EF45601B25A841820008B505 /* Test.swift */,
+				EF71E0DC25AEE2B200357EFE /* ChartTitleTableViewCell.swift */,
+				EF6CDE9F25AF197E009F546D /* StarTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -302,16 +328,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA961C425A71F7400734355 /* AppLogoTVC.swift in Sources */,
+				EF6CDEA025AF197E009F546D /* StarTableViewCell.swift in Sources */,
 				EF1012AD25A5D42700C93C6A /* DataController.swift in Sources */,
 				EF1012A825A5D1B700C93C6A /* HomeController.swift in Sources */,
 				EFA9618825A6AE0F00734355 /* LineChart.swift in Sources */,
+				EF71E0CE25AED16600357EFE /* StockChartData.swift in Sources */,
+				EF71E0D925AED20A00357EFE /* Chart.swift in Sources */,
 				EFA961C725A71F9800734355 /* YieldTVC.swift in Sources */,
 				EF45601C25A841820008B505 /* Test.swift in Sources */,
 				EF10128E25A5CDFE00C93C6A /* ViewController.swift in Sources */,
 				EFA961CB25A72D7C00734355 /* YieldView.swift in Sources */,
-				EFA9618E25A6AE8100734355 /* LineChartData.swift in Sources */,
+				EFA9618E25A6AE8100734355 /* LineChartDataModel.swift in Sources */,
+				EF71E0D525AED1C400357EFE /* Stock.swift in Sources */,
+				EF71E0D225AED1A500357EFE /* EstimateStock.swift in Sources */,
 				EF10128A25A5CDFE00C93C6A /* AppDelegate.swift in Sources */,
 				EF10128C25A5CDFE00C93C6A /* SceneDelegate.swift in Sources */,
+				EF71E0DD25AEE2B200357EFE /* ChartTitleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

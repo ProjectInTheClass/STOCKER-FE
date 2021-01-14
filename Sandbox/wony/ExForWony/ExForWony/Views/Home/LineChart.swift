@@ -10,6 +10,7 @@ import Charts
 import TinyConstraints
 
 class LineChart: UIView, ChartViewDelegate {
+    
     lazy var lineChartView : LineChartView = {
         let chartView = LineChartView()
         chartView.backgroundColor = .systemBlue
@@ -35,6 +36,13 @@ class LineChart: UIView, ChartViewDelegate {
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         print(entry)
+    }
+    
+    func setUp() {
+        self.addSubview(self.lineChartView)
+        lineChartView.centerInSuperview()
+        lineChartView.width(to: self)
+        lineChartView.heightToWidth(of: self)
     }
     
     func setData() {

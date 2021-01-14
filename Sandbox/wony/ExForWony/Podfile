@@ -7,6 +7,6 @@ target 'ExForWony' do
   pod 'Charts'
   pod 'TinyConstraints'
   pod 'ReSwift'
+  pod 'Alamofire'
   # Pods for ExForWony
-
 end
