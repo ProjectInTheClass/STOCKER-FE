@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 
-struct pastStockDataResponse: Codable {
-    var weekData: [weekStockData]
+struct PastStockDataResponse: Codable {
+    var weekData: [WeekStockData]
     var cumRevenue: Float
 }
 
-struct weekStockData: Codable {
+struct WeekStockData: Codable {
     var weekIndex: String
-    var stockList: [pastStock]
+    var stockList: [PastStock]
 }
 
-struct pastStock: Codable {
+struct PastStock: Codable {
     var stockCode: String
     var stockName: String
     var stockMaxPrice: Float

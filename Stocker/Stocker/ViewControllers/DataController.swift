@@ -7,17 +7,44 @@
 
 import UIKit
 
-class DataController: UIViewController, UITableViewDataSource {
+class DataController: UIViewController {
     
     @IBOutlet weak var dataTableView: UITableView!
     
     let identifier = ["LogoVC", "CumRevenueVC", "PastDataVC"]
     
-    var pastData: pastStockDataResponse? {
+    var pastData: PastStockDataResponse? {
         didSet{
             self.dataTableView.reloadData()
         }
     }
+   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dataTableView.dataSource = self
+        dataTableView.estimatedRowHeight = 200
+        dataTableView.rowHeight = UITableView.automaticDimension
+        
+        DataAPI.shared.getPastData { (result) in
+            switch result {
+            case .success(let _pastData):
+                self.pastData = _pastData
+            case .failure(let error):
+                let alert = UIAlertController(
+                    title: "에러가 발생 했습니다.",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default))
+                self.present(alert, animated: true)
+            }
+        }
+        // Do any additional setup after loading the view.
+    }
+
+}
+
+extension DataController: UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         3
@@ -39,31 +66,11 @@ class DataController: UIViewController, UITableViewDataSource {
             cell.logoImageView.image = UIImage(named: "Logo")
             return cell
         }else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! CumRevenueVC    
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! CumRevenueVC
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! PastDataVC
             return cell
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        dataTableView.dataSource = self
-        dataTableView.estimatedRowHeight = 200
-        dataTableView.rowHeight = UITableView.automaticDimension
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
