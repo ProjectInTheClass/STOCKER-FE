@@ -13,6 +13,12 @@ class DataController: UIViewController, UITableViewDataSource {
     
     let identifier = ["LogoVC", "CumRevenueVC", "PastDataVC"]
     
+    var pastData: pastStockDataResponse? {
+        didSet{
+            self.dataTableView.reloadData()
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         3
     }
@@ -20,7 +26,7 @@ class DataController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 2:
-            return 4
+            return pastData?.weekData.count ?? 0
         default:
             return 1
         }

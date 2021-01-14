@@ -11,17 +11,17 @@ import UIKit
 
 struct pastStockDataResponse: Codable {
     var weekData: [weekStockData]
-    var cumRevenue: Int
+    var cumRevenue: Float
 }
 
 struct weekStockData: Codable {
-    var weakIndex: String
-    var StockList: [pastStock]
+    var weekIndex: String
+    var stockList: [pastStock]
 }
 
 struct pastStock: Codable {
-    let stockCode: String
-    let stockName: String
-    var stockPrice: Double
-    var stockEstimatePrice: Double
+    var stockCode: String
+    var stockName: String
+    var stockMaxPrice: Float
+    var stockEstimatePrice: Float
 }
