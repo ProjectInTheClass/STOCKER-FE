@@ -39,6 +39,7 @@ class YieldTVC: UITableViewCell {
     @IBOutlet weak var yieldView: YieldView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var yieldLabel: UILabel!
+    @IBOutlet weak var chartImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -72,5 +73,6 @@ class YieldTVC: UITableViewCell {
         yieldView.layer.shadowRadius = 10
         yieldView.layer.masksToBounds = false
         yieldView.layer.zPosition = -1
+        chartImage.layer.cornerRadius = 10
     }
 }
