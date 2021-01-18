@@ -1,29 +1,38 @@
-//
-//  HomeController.swift
-//  Stocker
-//
-//  Created by SungJin Kim on 2021/01/05.
-//
-
 import UIKit
 
 class HomeController: UIViewController {
-
+    
+    @IBOutlet weak var homeTableView: UITableView!
+    
+    let identifiers : [String] = ["AppLogoTVC", "YieldTVC","PredictionTitleTVC", "PredictionTVC"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeTableView.dataSource = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension HomeController : UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return identifiers.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            return self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.row]) as! AppLogoTVC
+        }
+        else if indexPath.row == 1 {
+            return self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.row], for: indexPath) as! YieldTVC
+        }
+        else if indexPath.row == 2 {
+            return  self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.row]) as! PredictionTitleTVC
+        } else {
+            return  self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.row]) as! PredictionTVC
+        }
+    }
 }
