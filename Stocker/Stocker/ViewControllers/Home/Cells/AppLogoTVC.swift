@@ -1,25 +1,16 @@
 //
-//  StarTableViewCell.swift
-//  ExForWony
+//  AppLogoCell.swift
+//  Stocker
 //
-//  Created by 정원영 on 2021/01/13.
+//  Created by 정원영 on 2021/01/15.
 //
 
 import UIKit
 
-class StarTableViewCell: UITableViewCell {
+class AppLogoTVC: UITableViewCell {
 
-    
-    @IBOutlet weak var aView: UIView!
-    @IBOutlet weak var bView: UIView!
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        aView.backgroundColor = .black
-        bView.backgroundColor = .systemRed
         // Initialization code
     }
 
