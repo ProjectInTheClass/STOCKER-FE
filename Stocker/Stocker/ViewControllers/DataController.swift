@@ -11,7 +11,7 @@ class DataController: UIViewController {
     
     @IBOutlet weak var dataTableView: UITableView!
     
-    let identifier = ["LogoVC", "CumRevenueVC", "PastDataVC"]
+    let identifier = ["LogoVC", "HeaderVC", "PastDataVC"]
     
     var pastData: PastStockDataResponse? {
         didSet{
@@ -23,7 +23,7 @@ class DataController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataTableView.dataSource = self
-        dataTableView.estimatedRowHeight = 200
+        dataTableView.estimatedRowHeight = 100
         dataTableView.rowHeight = UITableView.automaticDimension
         
         DataAPI.shared.getPastData { (result) in
@@ -66,10 +66,32 @@ extension DataController: UITableViewDataSource{
             cell.logoImageView.image = UIImage(named: "Logo")
             return cell
         }else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! CumRevenueVC
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! HeaderVC
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! PastDataVC
+            let collection = [cell.stockCollection1,cell.stockCollection2,cell.stockCollection3,cell.stockCollection4,cell.stockCollection5]
+            
+            let rowData = pastData?.weekData[indexPath.row]
+            cell.weekLabel.text = rowData?.weekIndex
+            
+            for i in 0...4{
+                print(indexPath.row)
+                let data = rowData?.stockList[i]
+                collection[i]?[0].text = data?.stockCode
+                collection[i]?[1].text = data?.stockName
+                collection[i]?[2].text = "최고가"
+                collection[i]?[3].text = "\(data!.stockMaxPrice)"
+                collection[i]?[4].text = "예측가"
+                collection[i]?[5].text = "\(data!.stockEstimatePrice)"
+                
+            }
+            
+            cell.OutView.forEach { subview in
+                subview.removeFromSuperview()
+    //            contentStack.addArrangedSubview(subview)
+            }
+            
             return cell
         }
     }
