@@ -13,7 +13,7 @@ class Test: UITableViewCell {
         let yAxis = chartView.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 12)
         yAxis.setLabelCount(5, force: false)
-        yAxis.labelTextColor = .systemBlue
+        yAxis.labelTextColor = #colorLiteral(red: 0.1221737489, green: 0.1668476462, blue: 0.3037688136, alpha: 1)
         yAxis.axisLineColor = .systemBlue
         yAxis.labelPosition = .outsideChart
 
@@ -22,7 +22,9 @@ class Test: UITableViewCell {
         chartView.xAxis.setLabelCount(6, force: false)
         chartView.xAxis.labelTextColor = .systemBlue
         chartView.xAxis.axisLineColor = .systemBlue
-
+        chartView.xAxis.drawGridLinesEnabled = false
+        chartView.gridBackgroundColor = .black
+        chartView.setViewPortOffsets(left: 0, top: 0, right: 0, bottom: 0)
         chartView.animate(yAxisDuration: 2.5)
 
         return chartView
@@ -40,6 +42,7 @@ class Test: UITableViewCell {
         lineChartView.centerInSuperview()
         lineChartView.width(to: chartView)
         lineChartView.heightToWidth(of: chartView)
+        
         setYieldView()
         setData()
     }
@@ -56,14 +59,14 @@ class Test: UITableViewCell {
         func setData() {
             let set1 = LineChartDataSet(entries: yValues, label: "Subscrivers")
             
-            set1.mode = .linear
+            set1.mode = .cubicBezier
             set1.drawCirclesEnabled = false
-            set1.lineWidth = 1
-            set1.setColor(.systemBlue)
-            set1.fill = Fill(color: .systemBlue)
+            set1.lineWidth = 2
+            set1.setColor(#colorLiteral(red: 0.3392619491, green: 0.4610179067, blue: 0.9529199004, alpha: 1))
+            set1.fill = Fill(color: #colorLiteral(red: 0.842431128, green: 0.8734340072, blue: 0.9989667535, alpha: 1))
             set1.fillAlpha = 0.65
             set1.drawFilledEnabled = true
-    
+            
             set1.drawHorizontalHighlightIndicatorEnabled = false
             set1.highlightColor = .systemRed
             set1.highlightLineWidth = 2
