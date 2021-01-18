@@ -63,6 +63,7 @@ class Test: UITableViewCell {
             set1.drawCirclesEnabled = false
             set1.lineWidth = 2
             set1.setColor(#colorLiteral(red: 0.3392619491, green: 0.4610179067, blue: 0.9529199004, alpha: 1))
+//            #colorLiteral(red: 0.3392619491, green: 0.4610179067, blue: 0.9529199004, alpha: 1)
             set1.fill = Fill(color: #colorLiteral(red: 0.842431128, green: 0.8734340072, blue: 0.9989667535, alpha: 1))
             set1.fillAlpha = 0.65
             set1.drawFilledEnabled = true
