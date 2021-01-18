@@ -16,20 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-h5-yYD">
-                                <rect key="frame" x="30" y="292" width="354" height="312"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="312" id="KPB-wD-33e"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-T2-luK">
+                                <rect key="frame" x="15.5" y="389.5" width="383" height="159"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tE3-h5-yYD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Q6m-zU-Kkl"/>
-                            <constraint firstItem="tE3-h5-yYD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="248" id="mj1-Fe-Eae"/>
-                            <constraint firstItem="tE3-h5-yYD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qXq-GW-Cxj"/>
-                            <constraint firstItem="tE3-h5-yYD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="r7N-mB-s4F"/>
+                            <constraint firstItem="Bwk-T2-luK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="21" id="M5d-6D-3s2"/>
+                            <constraint firstItem="Bwk-T2-luK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YYX-e2-5pI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,7 +34,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="381" height="345.5"/>
+        <image name="Splash" width="383" height="159"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
