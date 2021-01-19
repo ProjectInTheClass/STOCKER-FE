@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		408B541D25AEBF7D00223386 /* PastStockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B541C25AEBF7D00223386 /* PastStockData.swift */; };
-		40B3D31325A6A2DD00F99C9E /* CumRevenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3D31225A6A2DD00F99C9E /* CumRevenueVC.swift */; };
+		40AA66F525AEEC1D002F69DF /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AA66F425AEEC1D002F69DF /* DataAPI.swift */; };
+		40B3D31325A6A2DD00F99C9E /* HeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3D31225A6A2DD00F99C9E /* HeaderVC.swift */; };
 		40B3D31725A6A86400F99C9E /* LogoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3D31625A6A86400F99C9E /* LogoVC.swift */; };
 		40B3D31B25A6ACAE00F99C9E /* PastDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3D31A25A6ACAE00F99C9E /* PastDataVC.swift */; };
 		933A472237486331DB2E552C /* Pods_Stocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028949E3FC192DE6F6974CCF /* Pods_Stocker.framework */; };
@@ -38,7 +39,8 @@
 		028949E3FC192DE6F6974CCF /* Pods_Stocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F431A2BF0DFA073637BE187 /* Pods-Stocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocker.debug.xcconfig"; path = "Target Support Files/Pods-Stocker/Pods-Stocker.debug.xcconfig"; sourceTree = "<group>"; };
 		408B541C25AEBF7D00223386 /* PastStockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastStockData.swift; sourceTree = "<group>"; };
-		40B3D31225A6A2DD00F99C9E /* CumRevenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumRevenueVC.swift; sourceTree = "<group>"; };
+		40AA66F425AEEC1D002F69DF /* DataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
+		40B3D31225A6A2DD00F99C9E /* HeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderVC.swift; sourceTree = "<group>"; };
 		40B3D31625A6A86400F99C9E /* LogoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVC.swift; sourceTree = "<group>"; };
 		40B3D31A25A6ACAE00F99C9E /* PastDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastDataVC.swift; sourceTree = "<group>"; };
 		77E3A528231F013977E2E1AA /* Pods-Stocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocker.release.xcconfig"; path = "Target Support Files/Pods-Stocker/Pods-Stocker.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				BD627DCE25A4488100DCB0B4 /* API.swift */,
+				40AA66F425AEEC1D002F69DF /* DataAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -153,7 +156,7 @@
 		BD627DD425A44ABC00DCB0B4 /* DataTab */ = {
 			isa = PBXGroup;
 			children = (
-				40B3D31225A6A2DD00F99C9E /* CumRevenueVC.swift */,
+				40B3D31225A6A2DD00F99C9E /* HeaderVC.swift */,
 				40B3D31625A6A86400F99C9E /* LogoVC.swift */,
 				40B3D31A25A6ACAE00F99C9E /* PastDataVC.swift */,
 			);
@@ -352,6 +355,7 @@
 				EF6FC07B259DB517001F6889 /* ViewController.swift in Sources */,
 				BD627DD825A44BD000DCB0B4 /* Stock.swift in Sources */,
 				EF6FC077259DB517001F6889 /* AppDelegate.swift in Sources */,
+				40AA66F525AEEC1D002F69DF /* DataAPI.swift in Sources */,
 				EFBE758E25B56EDA00783C27 /* PaddingLabel.swift in Sources */,
 				EF30B28825B13EE100D38E30 /* AppLogoTVC.swift in Sources */,
 				BD627DCF25A4488100DCB0B4 /* API.swift in Sources */,
@@ -360,7 +364,7 @@
 				EF7BF4C025B1301B0068252D /* YieldTVC.swift in Sources */,
 				EF9AD6F125B5174F0063D76B /* PredictionTVC.swift in Sources */,
 				408B541D25AEBF7D00223386 /* PastStockData.swift in Sources */,
-				40B3D31325A6A2DD00F99C9E /* CumRevenueVC.swift in Sources */,
+				40B3D31325A6A2DD00F99C9E /* HeaderVC.swift in Sources */,
 				EF9AD6F425B5195D0063D76B /* PredictionTitleTVC.swift in Sources */,
 				EF6FC079259DB517001F6889 /* SceneDelegate.swift in Sources */,
 				40B3D31B25A6ACAE00F99C9E /* PastDataVC.swift in Sources */,
