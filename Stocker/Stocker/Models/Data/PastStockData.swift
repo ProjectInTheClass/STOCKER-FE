@@ -9,9 +9,14 @@ import Foundation
 import UIKit
 
 
+struct PastStockDataItem {
+    var weekData: WeekStockData
+    var selected: Bool
+}
+
 struct PastStockDataResponse: Codable {
     var weekData: [WeekStockData]
-    var cumRevenue: Float
+//    var cumRevenue: Float
 }
 
 struct WeekStockData: Codable {

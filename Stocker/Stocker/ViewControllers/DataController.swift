@@ -18,18 +18,26 @@ class DataController: UIViewController {
             self.dataTableView.reloadData()
         }
     }
-   
+    
+    var weekDataList: [PastStockDataItem]=[] {
+        didSet{
+            self.dataTableView.reloadData()
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataTableView.dataSource = self
         dataTableView.estimatedRowHeight = 100
         dataTableView.rowHeight = UITableView.automaticDimension
-        
         DataAPI.shared.getPastData { (result) in
             switch result {
             case .success(let _pastData):
                 self.pastData = _pastData
+                for weekData in _pastData.weekData {
+                    self.weekDataList.append(PastStockDataItem(weekData: weekData, selected: false))
+                }
             case .failure(let error):
                 let alert = UIAlertController(
                     title: "에러가 발생 했습니다.",
@@ -72,27 +80,46 @@ extension DataController: UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! PastDataVC
             let collection = [cell.stockCollection1,cell.stockCollection2,cell.stockCollection3,cell.stockCollection4,cell.stockCollection5]
             
-            let rowData = pastData?.weekData[indexPath.row]
-            cell.weekLabel.text = rowData?.weekIndex
+            let rowData = weekDataList[indexPath.row].weekData
+            cell.weekLabel.text = rowData.weekIndex
             
             for i in 0...4{
                 print(indexPath.row)
-                let data = rowData?.stockList[i]
-                collection[i]?[0].text = data?.stockCode
-                collection[i]?[1].text = data?.stockName
+                let data = rowData.stockList[i]
+                collection[i]?[0].text = data.stockCode
+                collection[i]?[1].text = data.stockName
                 collection[i]?[2].text = "최고가"
-                collection[i]?[3].text = "\(data!.stockMaxPrice)"
+                collection[i]?[3].text = "\(data.stockMaxPrice)"
                 collection[i]?[4].text = "예측가"
-                collection[i]?[5].text = "\(data!.stockEstimatePrice)"
+                collection[i]?[5].text = "\(data.stockEstimatePrice)"
                 
             }
             
-            cell.OutView.forEach { subview in
-                subview.removeFromSuperview()
-    //            contentStack.addArrangedSubview(subview)
+            cell.index = indexPath.row
+            cell.delegate = self
+            if !weekDataList[indexPath.row].selected {
+                print("여기는 왜안오고???")
+                cell.dropdownButton.setImage(UIImage(systemName: "arrowtriangle.down.circle"), for: .normal)
+                cell.OutView.forEach { subview in
+                    subview.removeFromSuperview()
+        //            contentStack.addArrangedSubview(subview)
+                }
+            } else {
+                print("여기는 왜안와???")
+                cell.dropdownButton.setImage(UIImage(systemName: "arrowtriangle.up.circle"), for: .normal)
+                cell.OutView.forEach { subview in
+    //                subview.removeFromSuperview()
+                    cell.contentStack.addArrangedSubview(subview)
+                }
             }
             
             return cell
         }
+    }
+}
+
+extension DataController: DropdownCellDelegate {
+    func selectedInfoBtn(index: Int) {
+        weekDataList[index].selected = !weekDataList[index].selected
     }
 }

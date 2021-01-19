@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol DropdownCellDelegate {
+    func selectedInfoBtn(index: Int)
+}
+
 class PastDataVC: UITableViewCell {
 
     @IBOutlet weak var PDview: UIView!
@@ -20,7 +24,9 @@ class PastDataVC: UITableViewCell {
     @IBOutlet var stockCollection5: [UILabel]!
     @IBOutlet weak var contentStack: UIStackView!
     @IBOutlet weak var dropdownButton: UIButton!
-    var dropdown = false
+    
+    var index = 0
+    var delegate: DropdownCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,27 +49,10 @@ class PastDataVC: UITableViewCell {
             view.layer.shadowOpacity = 0.2
             view.layer.shadowRadius = 4.0
         }
-        
-        dropdownButton.setImage(UIImage(systemName: "arrowtriangle.down.circle"), for: .normal)
         // Configure the view for the selected state
     }
     
     @IBAction func dropdown(_ sender: Any) {
-        dropdown = !dropdown
-        if dropdown {
-            dropdownButton.setImage(UIImage(systemName: "arrowtriangle.down.circle"), for: .normal)
-            OutView.forEach { subview in
-                subview.removeFromSuperview()
-    //            contentStack.addArrangedSubview(subview)
-            }
-
-            
-        } else {
-            dropdownButton.setImage(UIImage(systemName: "arrowtriangle.up.circle"), for: .normal)
-            OutView.forEach { subview in
-//                subview.removeFromSuperview()
-                contentStack.addArrangedSubview(subview)
-            }
-        }
+        self.delegate?.selectedInfoBtn(index: index)
     }
 }
