@@ -79,23 +79,12 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fjf-d9-Slb">
                                                             <rect key="frame" x="10" y="10" width="348" height="383"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ntg-KV-MVc">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12월 4주차" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJO-d2-OLl">
                                                                     <rect key="frame" x="0.0" y="0.0" width="348" height="38"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12월 4주차" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJO-d2-OLl">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="98" height="38"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT4-E3-gno">
-                                                                            <rect key="frame" x="318" y="0.0" width="30" height="38"/>
-                                                                            <connections>
-                                                                                <action selector="dropdown:" destination="eAu-Lc-f1K" eventType="touchUpInside" id="z4s-G6-PkZ"/>
-                                                                            </connections>
-                                                                        </button>
-                                                                    </subviews>
-                                                                </stackView>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayb-i4-3Qq">
                                                                     <rect key="frame" x="0.0" y="46" width="348" height="61"/>
                                                                     <subviews>
@@ -443,6 +432,13 @@
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT4-E3-gno">
+                                                            <rect key="frame" x="10" y="0.0" width="348" height="403"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="dropdown:" destination="eAu-Lc-f1K" eventType="touchUpInside" id="z4s-G6-PkZ"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <constraints>

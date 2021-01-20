@@ -19,11 +19,7 @@ class DataController: UIViewController {
         }
     }
     
-    var weekDataList: [PastStockDataItem]=[] {
-        didSet{
-            self.dataTableView.reloadData()
-        }
-    }
+    var weekDataList: [PastStockDataItem]=[]
 
     
     override func viewDidLoad() {
@@ -98,15 +94,11 @@ extension DataController: UITableViewDataSource{
             cell.index = indexPath.row
             cell.delegate = self
             if !weekDataList[indexPath.row].selected {
-                print("여기는 왜안오고???")
-                cell.dropdownButton.setImage(UIImage(systemName: "arrowtriangle.down.circle"), for: .normal)
                 cell.OutView.forEach { subview in
                     subview.removeFromSuperview()
         //            contentStack.addArrangedSubview(subview)
                 }
             } else {
-                print("여기는 왜안와???")
-                cell.dropdownButton.setImage(UIImage(systemName: "arrowtriangle.up.circle"), for: .normal)
                 cell.OutView.forEach { subview in
     //                subview.removeFromSuperview()
                     cell.contentStack.addArrangedSubview(subview)
@@ -121,5 +113,6 @@ extension DataController: UITableViewDataSource{
 extension DataController: DropdownCellDelegate {
     func selectedInfoBtn(index: Int) {
         weekDataList[index].selected = !weekDataList[index].selected
+        dataTableView.reloadRows(at: [IndexPath.init(row: index, section: 2)], with: .fade)
     }
 }
