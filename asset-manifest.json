@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/STOCKER-FE/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/STOCKER-FE/static/js/main.e83d2638.chunk.js",
+    "main.js.map": "/STOCKER-FE/static/js/main.e83d2638.chunk.js.map",
+    "runtime-main.js": "/STOCKER-FE/static/js/runtime-main.6daf433f.js",
+    "runtime-main.js.map": "/STOCKER-FE/static/js/runtime-main.6daf433f.js.map",
+    "static/js/2.2fac2e85.chunk.js": "/STOCKER-FE/static/js/2.2fac2e85.chunk.js",
+    "static/js/2.2fac2e85.chunk.js.map": "/STOCKER-FE/static/js/2.2fac2e85.chunk.js.map",
+    "static/js/3.f379f09c.chunk.js": "/STOCKER-FE/static/js/3.f379f09c.chunk.js",
+    "static/js/3.f379f09c.chunk.js.map": "/STOCKER-FE/static/js/3.f379f09c.chunk.js.map",
+    "index.html": "/STOCKER-FE/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/STOCKER-FE/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.2fac2e85.chunk.js.LICENSE.txt": "/STOCKER-FE/static/js/2.2fac2e85.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/STOCKER-FE/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6daf433f.js",
+    "static/js/2.2fac2e85.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.e83d2638.chunk.js"
+  ]
+}
