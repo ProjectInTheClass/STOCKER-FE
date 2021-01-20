@@ -1,16 +1,27 @@
 {
   "homepage": "https://projectintheclass.github.io/STOCKER-FE",
-  "name": "docs",
+  "name": "everysports",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "animate.css": "4.1.0",
+    "animate.css-react": "1.0.0",
+    "aos": "2.3.4",
+    "gh-pages": "3.1.0",
+    "polished": "3.6.3",
+    "react": "^16.13.1",
+    "react-animate-on-scroll": "2.1.5",
+    "react-animated-css": "1.2.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "3.10.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.1",
+    "react-scroll-to": "3.0.0-beta.6",
+    "styled-components": "5.1.0",
+    "typescript": "3.9.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,10 +32,7 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -37,8 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "3.1.0"
   }
 }
