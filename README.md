@@ -18,9 +18,9 @@
 
 ## Contributor
 <p align="center" width="100%">
-  <a href="https://github.com/WonyJeong"><img width="100pixel" src="https://avatars2.githubusercontent.com/u/59948675?s=400&u=120c5ecc4d8552c495ad8a56ddc5ee35eb4b36ab&v=4"/></a>
-  <a href="https://github.com/koalakid1"><img width="100pixel" src="https://avatars1.githubusercontent.com/u/46618988?s=400&u=e9159b5d6f2ab1436abef44c09b028a513e3f455&v=4"/></a>
-  <a href="https://github.com/comojin1994"><img width="100pixel" src="https://avatars1.githubusercontent.com/u/46745325?s=460&u=a43a30c90593eb98ce339775278b4311295736f5&v=4"/></a>
+  <a href="https://github.com/WonyJeong"><img width="100pixel" src="https://user-images.githubusercontent.com/46745325/105145287-e05b1700-5b41-11eb-9c5b-378cb99d66d1.png"/></a>
+  <a href="https://github.com/koalakid1"><img width="100pixel" src="https://user-images.githubusercontent.com/46745325/105145311-e8b35200-5b41-11eb-830a-11aaf42874df.png"/></a>
+  <a href="https://github.com/comojin1994"><img width="100pixel" src="https://user-images.githubusercontent.com/46745325/105145318-ea7d1580-5b41-11eb-9142-e3e08a009145.png"/></a>
 </p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
