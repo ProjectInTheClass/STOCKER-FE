@@ -5,3 +5,5 @@
 </p>
 
 ### 필독🔥🔥🔥 [IOS 개발 규칙](https://github.com/Himelo/IOS-Project-Rules)
+* [STOCKER DL Repository](https://github.com/Himelo/STOCKER-DL)
+* [STOCKER BE Repository](https://github.com/Himelo/STOCKER-BE)
