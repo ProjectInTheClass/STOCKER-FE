@@ -1,23 +1,32 @@
 {
   "files": {
-    "main.css": "/STOCKER-FE/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/STOCKER-FE/static/js/main.e83d2638.chunk.js",
-    "main.js.map": "/STOCKER-FE/static/js/main.e83d2638.chunk.js.map",
-    "runtime-main.js": "/STOCKER-FE/static/js/runtime-main.6daf433f.js",
-    "runtime-main.js.map": "/STOCKER-FE/static/js/runtime-main.6daf433f.js.map",
-    "static/js/2.2fac2e85.chunk.js": "/STOCKER-FE/static/js/2.2fac2e85.chunk.js",
-    "static/js/2.2fac2e85.chunk.js.map": "/STOCKER-FE/static/js/2.2fac2e85.chunk.js.map",
-    "static/js/3.f379f09c.chunk.js": "/STOCKER-FE/static/js/3.f379f09c.chunk.js",
-    "static/js/3.f379f09c.chunk.js.map": "/STOCKER-FE/static/js/3.f379f09c.chunk.js.map",
+    "main.css": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/STOCKER-FE/static/js/main.eaa8c725.chunk.js",
+    "main.js.map": "/STOCKER-FE/static/js/main.eaa8c725.chunk.js.map",
+    "runtime-main.js": "/STOCKER-FE/static/js/runtime-main.01cd7632.js",
+    "runtime-main.js.map": "/STOCKER-FE/static/js/runtime-main.01cd7632.js.map",
+    "static/css/2.4707e12a.chunk.css": "/STOCKER-FE/static/css/2.4707e12a.chunk.css",
+    "static/js/2.72dd8a36.chunk.js": "/STOCKER-FE/static/js/2.72dd8a36.chunk.js",
+    "static/js/2.72dd8a36.chunk.js.map": "/STOCKER-FE/static/js/2.72dd8a36.chunk.js.map",
     "index.html": "/STOCKER-FE/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/STOCKER-FE/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.2fac2e85.chunk.js.LICENSE.txt": "/STOCKER-FE/static/js/2.2fac2e85.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/STOCKER-FE/static/media/logo.6ce24c58.svg"
+    "precache-manifest.a4804589d02f6e9e4336eaa6ac8bf82d.js": "/STOCKER-FE/precache-manifest.a4804589d02f6e9e4336eaa6ac8bf82d.js",
+    "service-worker.js": "/STOCKER-FE/service-worker.js",
+    "static/css/2.4707e12a.chunk.css.map": "/STOCKER-FE/static/css/2.4707e12a.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.72dd8a36.chunk.js.LICENSE.txt": "/STOCKER-FE/static/js/2.72dd8a36.chunk.js.LICENSE.txt",
+    "static/media/EverySports.png": "/STOCKER-FE/static/media/EverySports.5d7f4679.png",
+    "static/media/PTPose.gif": "/STOCKER-FE/static/media/PTPose.7c576c39.gif",
+    "static/media/code.jpg": "/STOCKER-FE/static/media/code.1e4a8181.jpg",
+    "static/media/es_logo.png": "/STOCKER-FE/static/media/es_logo.5d7f4679.png",
+    "static/media/mainImg2.png": "/STOCKER-FE/static/media/mainImg2.e663c1a1.png",
+    "static/media/review.png": "/STOCKER-FE/static/media/review.9cf4604c.png",
+    "static/media/splash.png": "/STOCKER-FE/static/media/splash.36119ea1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6daf433f.js",
-    "static/js/2.2fac2e85.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.e83d2638.chunk.js"
+    "static/js/runtime-main.01cd7632.js",
+    "static/css/2.4707e12a.chunk.css",
+    "static/js/2.72dd8a36.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.eaa8c725.chunk.js"
   ]
 }
