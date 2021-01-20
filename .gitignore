@@ -208,3 +208,6 @@ $RECYCLE.BIN/
 Carthage/Build
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,xcode,cocoapods,yarn,swift,swiftpackagemanager
+
+
+docs/node_modules

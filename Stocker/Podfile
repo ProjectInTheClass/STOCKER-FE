@@ -6,6 +6,7 @@ target 'Stocker' do
   use_frameworks!
   pod 'Charts'
   pod 'Alamofire', '~> 5.2'
+  pod 'TinyConstraints'
   # Pods for Stocker
 
 end
