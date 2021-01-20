@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e1d0cb3160053429dd39b11df3fffc72",
+    "revision": "20d5468ec21012089823e967d2b72ea1",
     "url": "/STOCKER-FE/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/STOCKER-FE/static/css/2.4707e12a.chunk.css"
   },
   {
-    "revision": "8bfa1286c0c9f3ee6cd5",
+    "revision": "8b7e00e12f2095f8d05b",
     "url": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/STOCKER-FE/static/js/2.72dd8a36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8bfa1286c0c9f3ee6cd5",
-    "url": "/STOCKER-FE/static/js/main.d883a123.chunk.js"
+    "revision": "8b7e00e12f2095f8d05b",
+    "url": "/STOCKER-FE/static/js/main.ca23b02f.chunk.js"
   },
   {
     "revision": "2567f3acdec22c3c0cd1",
@@ -44,15 +44,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/STOCKER-FE/static/media/es_logo.5d7f4679.png"
   },
   {
-    "revision": "e663c1a11749bb4dce6618db06ef6709",
-    "url": "/STOCKER-FE/static/media/mainImg2.e663c1a1.png"
-  },
-  {
     "revision": "9cf4604cff51ee00fe3340b2d612008f",
     "url": "/STOCKER-FE/static/media/review.9cf4604c.png"
   },
   {
     "revision": "36119ea12f2797cde207ba5093c4aecc",
     "url": "/STOCKER-FE/static/media/splash.36119ea1.png"
+  },
+  {
+    "revision": "f909f8c2d59f5982703912ac817fb024",
+    "url": "/STOCKER-FE/static/media/stockermain.f909f8c2.png"
   }
 ]);
