@@ -10,16 +10,12 @@ class HomeController: UIViewController {
     
     let identifiers : [String] = ["AppLogoTVC", "YieldTVC","PredictionTitleTVC", "PredictionTVC"]
     
-    var data  : [temp] = [] {
-        didSet {
-            self.homeTableView.reloadData()
-        }
-    }
-    
+    var screenInit : Bool = true
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeTableView.dataSource = self
         
+        homeTableView.dataSource = self
         self.homeTableView.estimatedRowHeight = 200
         self.homeTableView.rowHeight = UITableView.automaticDimension
     }
@@ -27,8 +23,7 @@ class HomeController: UIViewController {
 
 extension HomeController : ComponentProductCellDelegate{
     func touchUpInside(index: Int) {
-        self.data.append(temp(selected: true))
-        
+        homeTableView.reloadRows(at: [IndexPath.init(row: 3, section: 0)], with: .fade)
     }
 }
 
@@ -55,12 +50,7 @@ extension HomeController : UITableViewDataSource {
             
             cell.index = indexPath.row
             cell.delegate = self
-            
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
-                cell.tempView.alpha = cell.tempView.alpha == 0 ? 1 : 0
-                cell.tempView.isHidden = !cell.tempView.isHidden
-                cell.chartViewHeightConstraint.constant = cell.tempView.isHidden == true ? 0 : 90
-            }, completion: nil)
+                        
             return  cell
         }  else {
             return  self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.row]) as! PredictionTitleTVC

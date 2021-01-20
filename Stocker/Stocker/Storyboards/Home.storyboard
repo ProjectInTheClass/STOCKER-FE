@@ -136,6 +136,8 @@
                                         <connections>
                                             <outlet property="a" destination="cnG-xz-oen" id="lKT-HB-35i"/>
                                             <outlet property="b" destination="ltw-nv-kIm" id="5dC-u7-nNA"/>
+                                            <outlet property="cumRevenueLabel" destination="cbZ-eG-2fu" id="Ugr-Vh-eqB"/>
+                                            <outlet property="lastRevenueLabel" destination="MGb-tb-Iym" id="ZFc-5D-huR"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PredictionTitleTVC" rowHeight="36" id="es2-Wh-iTi" customClass="PredictionTitleTVC" customModule="Stocker" customModuleProvider="target">
@@ -275,11 +277,11 @@
                                                                 <constraint firstAttribute="trailing" secondItem="Mgk-VU-gRY" secondAttribute="trailing" id="s3S-qa-FcR"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1e-Pb-Crg">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1e-Pb-Crg" customClass="StockerChartView" customModule="Stocker" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="86" width="374" height="179"/>
                                                             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="90" id="j4l-qo-5Wp"/>
+                                                                <constraint firstAttribute="height" constant="300" id="j4l-qo-5Wp"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -296,9 +298,10 @@
                                         <connections>
                                             <outlet property="chartViewHeightConstraint" destination="j4l-qo-5Wp" id="vws-RH-hjK"/>
                                             <outlet property="component" destination="nmb-a8-pxu" id="9g4-Js-zSl"/>
+                                            <outlet property="stackView" destination="FG2-zn-dK4" id="3M9-dM-jfb"/>
                                             <outlet property="stockItemButton" destination="Mgk-VU-gRY" id="3sx-B2-SE8"/>
+                                            <outlet property="stockerChartView" destination="W1e-Pb-Crg" id="zJ3-jH-ylo"/>
                                             <outlet property="temp" destination="lYO-Zh-LgA" id="bCI-TK-he1"/>
-                                            <outlet property="tempView" destination="W1e-Pb-Crg" id="jTA-2X-8Iu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
