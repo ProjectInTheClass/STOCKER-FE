@@ -13,21 +13,22 @@ class StockerChartView: UIView, ChartViewDelegate {
     
     lazy var lineChartView : LineChartView = {
         let chartView = LineChartView()
-        chartView.backgroundColor = .systemBlue
+        chartView.backgroundColor = .systemBackground
         chartView.rightAxis.enabled = false
         
         let yAxis = chartView.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 12)
         yAxis.setLabelCount(6, force: false)
-        yAxis.labelTextColor = .white
-        yAxis.axisLineColor = .white
+        yAxis.labelTextColor = #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1)
+        yAxis.axisLineColor = #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1)
         yAxis.labelPosition = .outsideChart
         
         chartView.xAxis.labelPosition = .bottom
         chartView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         chartView.xAxis.setLabelCount(6, force: false)
-        chartView.xAxis.labelTextColor = .white
-        chartView.xAxis.axisLineColor = .systemBlue
+        chartView.xAxis.labelTextColor = #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1)
+        chartView.xAxis.axisLineColor = .black
+        chartView.setVisibleYRangeMaximum(<#T##maxYRange: Double##Double#>, axis: <#T##YAxis.AxisDependency#>)
         
         chartView.animate(xAxisDuration: 2.5)
         
@@ -41,23 +42,28 @@ class StockerChartView: UIView, ChartViewDelegate {
     func setUp(_ yValues : [ChartDataEntry]) {
         self.addSubview(self.lineChartView)
         lineChartView.centerInSuperview()
+        lineChartView.height(300)
         lineChartView.width(to: self)
-        lineChartView.heightToWidth(of: self)
+//        lineChartView.heightToWidth(of: self)
         setData(yValues)
     }
     
+    func setChartLimitLine(_ estimatePrice : Double){
+        let ll = ChartLimitLine(limit: estimatePrice, label: "예측값")
+        lineChartView.leftAxis.addLimitLine(ll)
+    }
+
     func setData(_ yValues : [ChartDataEntry] ) {
-        let set1 = LineChartDataSet(entries: yValues, label: "Subscrivers")
+        let set1 = LineChartDataSet(entries: yValues, label: "시간")
         set1.mode = .cubicBezier
         set1.drawCirclesEnabled = false
-        set1.lineWidth = 3
-        set1.setColor(.white)
-        set1.fill = Fill(color: .white)
-        set1.fillAlpha = 0.8
+        set1.lineWidth = 2
+        set1.setColor(#colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1))
+        set1.fill = Fill(color: #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1))
+        set1.fillAlpha = 0.5
         set1.drawFilledEnabled = true
-        
         set1.drawHorizontalHighlightIndicatorEnabled = false
-        set1.highlightColor = .systemRed
+        set1.highlightColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         set1.highlightLineWidth = 2
         
         let data = LineChartData(dataSet: set1)
