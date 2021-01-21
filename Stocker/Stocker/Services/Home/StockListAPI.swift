@@ -8,10 +8,10 @@
 import Foundation
 import Alamofire
 
-class RevenueAPI {
-    static let shared = RevenueAPI()
+class StockListAPI {
+    static let shared = StockListAPI()
     
-    func getRevenueData(completion : @escaping (Result<EstimateStock, Error>) -> Void) {
+    func getStockListData(completion : @escaping (Result<[StockList], Error>) -> Void) {
         let decoder = JSONDecoder()
         let url = "https://uiui.nashot.io/home/estimatestock"
         
@@ -20,7 +20,7 @@ class RevenueAPI {
                 case .success(let data):
                     do {
                         let estimateStock : EstimateStock = try decoder.decode(EstimateStock.self, from: data)
-                        completion(.success(estimateStock))
+                        completion(.success(estimateStock.stockList))
                     } catch {
                         completion(.failure(error))
                     }
