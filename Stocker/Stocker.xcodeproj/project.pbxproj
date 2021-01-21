@@ -35,6 +35,8 @@
 		EF9AD6F425B5195D0063D76B /* PredictionTitleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9AD6F325B5195D0063D76B /* PredictionTitleTVC.swift */; };
 		EF9E7B5425B7C3270089701D /* EstimateStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B5325B7C3270089701D /* EstimateStock.swift */; };
 		EF9E7B5925B7C5410089701D /* RevenueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B5825B7C5410089701D /* RevenueAPI.swift */; };
+		EFA353D825B91B9100F5F2BE /* StockerChartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA353D725B91B9100F5F2BE /* StockerChartAPI.swift */; };
+		EFA353DE25B9298000F5F2BE /* StockListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA353DD25B9298000F5F2BE /* StockListAPI.swift */; };
 		EFBE758E25B56EDA00783C27 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE758D25B56EDA00783C27 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		EF9AD6F325B5195D0063D76B /* PredictionTitleTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionTitleTVC.swift; sourceTree = "<group>"; };
 		EF9E7B5325B7C3270089701D /* EstimateStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateStock.swift; sourceTree = "<group>"; };
 		EF9E7B5825B7C5410089701D /* RevenueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueAPI.swift; sourceTree = "<group>"; };
+		EFA353D725B91B9100F5F2BE /* StockerChartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockerChartAPI.swift; sourceTree = "<group>"; };
+		EFA353DD25B9298000F5F2BE /* StockListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListAPI.swift; sourceTree = "<group>"; };
 		EFBE758D25B56EDA00783C27 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				EF9E7B5825B7C5410089701D /* RevenueAPI.swift */,
+				EFA353D725B91B9100F5F2BE /* StockerChartAPI.swift */,
+				EFA353DD25B9298000F5F2BE /* StockListAPI.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -385,12 +391,14 @@
 				EF30B28825B13EE100D38E30 /* AppLogoTVC.swift in Sources */,
 				BD627DCF25A4488100DCB0B4 /* API.swift in Sources */,
 				EF30B29725B1508200D38E30 /* LastRevenueView.swift in Sources */,
+				EFA353D825B91B9100F5F2BE /* StockerChartAPI.swift in Sources */,
 				BD627DDF25A44C0000DCB0B4 /* tVC2.swift in Sources */,
 				EF7BF4C025B1301B0068252D /* YieldTVC.swift in Sources */,
 				EF9AD6F125B5174F0063D76B /* PredictionTVC.swift in Sources */,
 				408B541D25AEBF7D00223386 /* PastStockData.swift in Sources */,
 				EF9E7B5425B7C3270089701D /* EstimateStock.swift in Sources */,
 				40B3D31325A6A2DD00F99C9E /* HeaderVC.swift in Sources */,
+				EFA353DE25B9298000F5F2BE /* StockListAPI.swift in Sources */,
 				EF2592E125B6FD9500D285BA /* StockerChartView.swift in Sources */,
 				EF9AD6F425B5195D0063D76B /* PredictionTitleTVC.swift in Sources */,
 				EF9E7B5925B7C5410089701D /* RevenueAPI.swift in Sources */,
