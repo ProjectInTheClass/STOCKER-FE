@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import logoImg from "../img/es_logo.png";
+import logoImg from "../img/stockerLogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ScrollTo } from "react-scroll-to";
 
@@ -150,7 +150,7 @@ const Header = () => {
         <PageHeader>
           <BrandContainer>
             <img src={logoImg} />
-            <a href="/">EverySports</a>
+            <a href="/">STOCKER</a>
           </BrandContainer>
           <NavigationContainer>
             {/* <li>회사소개</li>
@@ -159,14 +159,14 @@ const Header = () => {
             <li>
               <ScrollTo>
                 {({ scroll }) => (
-                  <a onClick={() => scroll({ x: 0, y: 734 })}>desktop</a>
+                  <a onClick={() => scroll({ x: 0, y: 734 })}></a>
                 )}
               </ScrollTo>
             </li>
             <li>
               <ScrollTo>
                 {({ scroll }) => (
-                  <a onClick={() => scroll({ x: 0, y: 758 })}>tablet</a>
+                  <a onClick={() => scroll({ x: 0, y: 758 })}></a>
                 )}
               </ScrollTo>
             </li>

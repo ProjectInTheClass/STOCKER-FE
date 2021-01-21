@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import mainImg from "../img/stockermain.png";
+import logoImg from "../img/stockerLogo.png";
 import OpacityBlock from "./ReuseableComponens/OpacityBlock";
 
 const IndexContainer = styled.div`
@@ -17,6 +18,18 @@ const IndexMainView = styled.div`
   align-items: center;
   width: 100%;
   height: 90vh;
+`;
+
+const MainLogoImg = styled.img`
+  display: flex;
+  width: 40rem;
+  height: 18rem;
+  border-width: 1px;
+  margin-top: 300px;
+  @media screen and (max-width: 767px) {
+    width: 30rem;
+    height: 13rem;
+  }
 `;
 
 const MainBackgroundImg = styled.div`
@@ -42,25 +55,13 @@ const IndexContextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   width: auto;
   height: 480px;
-  h1 {
-    font-size: 5rem;
-    color: white;
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: 2rem;
-    color: white;
-  }
-
   @media screen and (min-width: 768px) and(max-width: 991px) {
+    align-items: center;
   }
   @media screen and (max-width: 767px) {
-    h1 {
-      font-size: 3rem;
-    }
   }
 `;
 
@@ -109,8 +110,7 @@ const IntroContents = () => {
         <MainBackgroundImg img={mainImg}>
           <OpacityBlock height={"85vh"} />
           <IndexContextContainer>
-            <h1>STOCKER</h1>
-            <p>내 손안의 똑똑한 AI 펀드 매니저</p>
+            <MainLogoImg src={logoImg} />
           </IndexContextContainer>
         </MainBackgroundImg>
         <MoreButton>
