@@ -28,8 +28,8 @@ class StockerChartView: UIView, ChartViewDelegate {
         chartView.xAxis.setLabelCount(6, force: false)
         chartView.xAxis.labelTextColor = #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1)
         chartView.xAxis.axisLineColor = .black
-        chartView.setVisibleYRangeMaximum(<#T##maxYRange: Double##Double#>, axis: <#T##YAxis.AxisDependency#>)
         
+
         chartView.animate(xAxisDuration: 2.5)
         
         return chartView
