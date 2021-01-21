@@ -10,11 +10,7 @@ class YieldTVC: UITableViewCell {
     @IBOutlet weak var cumRevenueLabel: UILabel!
     @IBOutlet weak var lastRevenueLabel: UILabel!
     
-    var revenue : [Float] = [] {
-        didSet{
-            
-        }
-    }
+    var revenue : [Double] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +22,8 @@ class YieldTVC: UITableViewCell {
                 self.cumRevenueLabel.text =
                     String(_revenue.cumRevenue)
                 self.lastRevenueLabel.text = String(_revenue.lastRevenue)
-                
                 self.revenue.append(_revenue.cumRevenue)
                 self.revenue.append(_revenue.lastRevenue)
-                print("revenue : \(self.revenue)")
             case .failure(let error):
                 print(error)
             }
