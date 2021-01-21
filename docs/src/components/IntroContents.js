@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import mainImg from "../img/mainImg2.png";
+import mainImg from "../img/stockermain.png";
 import OpacityBlock from "./ReuseableComponens/OpacityBlock";
 
 const IndexContainer = styled.div`
