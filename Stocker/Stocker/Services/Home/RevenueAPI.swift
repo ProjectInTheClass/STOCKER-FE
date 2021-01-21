@@ -13,7 +13,7 @@ class RevenueAPI {
     
     func getRevenueData(completion : @escaping (Result<EstimateStock, Error>) -> Void) {
         let decoder = JSONDecoder()
-        let url = "http://everysports.iptime.org:5000/home/estimatestock"
+        let url = "https://uiui.nashot.io/home/estimatestock"
         
         AF.request(url).responseData(completionHandler: { response in
             switch response.result {
