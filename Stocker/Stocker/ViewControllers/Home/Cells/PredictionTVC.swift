@@ -7,8 +7,9 @@ protocol ComponentProductCellDelegate {
 }
 
 class PredictionTVC: UITableViewCell {
-//    @IBOutlet weak var stockItemView: UIStackView!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var component: UIView!
     @IBOutlet weak var stockItemOpenButton: UIButton!
     @IBOutlet weak var stockCodeLabel: UILabel!
@@ -27,29 +28,35 @@ class PredictionTVC: UITableViewCell {
     
     var chartDataEntry : [ChartDataEntry] = [] {
         didSet{
-            stockerChartView.setUp(chartDataEntry)
+            if stockerChartView != nil {
+                stockerChartView.setUp(chartDataEntry)
+            }
         }
     }
     
     var chartLimitLineValue : Double = 0.0 {
         didSet{
-            stockerChartView.setChartLimitLine(chartLimitLineValue)
+            if stockerChartView != nil {
+                stockerChartView.setChartLimitLine(chartLimitLineValue)
+            }
         }
     }
     
-    
-    
-    
+    var isReloaded : Bool = false {
+        didSet{
+            stockerChartView.setUp(chartDataEntry)
+            stockerChartView.setChartLimitLine(chartLimitLineValue)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
         //Setting Style
         setContainerStyle()
+        stockerChartView.layer.zPosition = -1
     }
     
     @IBAction func touchUpInside(_ sender: UIButton) {
-//        stackView.addArrangedSubview(self.stockerChartView)
         self.delegate?.touchUpInside(index: self.index)
     }
     
@@ -83,6 +90,5 @@ class PredictionTVC: UITableViewCell {
         stockerChartView.layer.borderWidth = 2
         stockerChartView.layer.borderColor = #colorLiteral(red: 0.001231680741, green: 0.6993102431, blue: 0.9645704627, alpha: 1)
         stockerChartView.clipsToBounds = true
-        
     }
 }

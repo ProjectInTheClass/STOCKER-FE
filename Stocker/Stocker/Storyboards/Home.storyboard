@@ -393,7 +393,9 @@
                                             <outlet property="compareStockEstimateRatioLabel" destination="iZp-JS-rX7" id="W1C-Y5-hsf"/>
                                             <outlet property="compareStockPriceRatioLabel" destination="GN3-ce-XjB" id="ltE-Pw-p0N"/>
                                             <outlet property="component" destination="nmb-a8-pxu" id="9g4-Js-zSl"/>
+                                            <outlet property="heightConstraint" destination="j4l-qo-5Wp" id="xZX-v4-1rc"/>
                                             <outlet property="lastTimeLabel" destination="JpI-4u-3Ju" id="fXC-Ll-PRE"/>
+                                            <outlet property="stackView" destination="FG2-zn-dK4" id="NEL-2B-0KA"/>
                                             <outlet property="stockCodeLabel" destination="Xlm-ZT-0dI" id="DNn-y7-vZJ"/>
                                             <outlet property="stockEstimateLabel" destination="NZh-zk-2qI" id="KaL-7h-lB5"/>
                                             <outlet property="stockItemOpenButton" destination="9bS-Vs-gBV" id="CFw-Zc-meS"/>
