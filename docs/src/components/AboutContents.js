@@ -49,7 +49,7 @@ const Splah = styled.img`
 const BackgroundStyles = styled.div`
   width: 100%;
   height: 150px;
-  background: #96f2d7;
+  background: #4dabf7;
   position: absolute;
   transform: translate(0, 270%);
   z-index: -1;

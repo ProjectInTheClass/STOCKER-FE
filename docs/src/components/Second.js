@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import brandLogo from "../img/EverySports.png";
+import brandLogo from "../img/StockerLogo.png";
 
 const Container = styled.div`
   width: 100%;
@@ -25,7 +25,7 @@ const Contents = styled.div`
 
 const BrandLogo = styled.img`
   display: flex;
-  width: 18rem;
+  width: 35rem;
   height: 18rem;
   margin-right: 3rem;
   transition: 0.3s ease-in;
@@ -51,10 +51,10 @@ const Second = () => {
     <Container>
       <Contents>
         <BrandLogo src={brandLogo} />
-        <BrandDescContainer>
+        {/* <BrandDescContainer>
           <h1>STOCKER</h1>
           <p>얼렁얼렁 개발해버리장~~~</p>
-        </BrandDescContainer>
+        </BrandDescContainer> */}
       </Contents>
     </Container>
   );
