@@ -8,8 +8,7 @@
 import UIKit
 
 class LogoVC: UITableViewCell {
-
-    @IBOutlet weak var logoImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

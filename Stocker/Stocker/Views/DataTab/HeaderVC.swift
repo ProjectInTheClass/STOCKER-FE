@@ -9,7 +9,8 @@ import UIKit
 
 class HeaderVC: UITableViewCell {
     
-    @IBOutlet weak var Hlabel: UILabel!
+    @IBOutlet weak var chartImageView: UIImageView!
+    @IBOutlet weak var HeaderView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +19,15 @@ class HeaderVC: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        Hlabel.text = "지난 한달간 데이터"
+        
+        chartImageView.image = UIImage(named: "chart")
+        
+        HeaderView.layer.cornerRadius = 10
+        HeaderView.layer.shadowColor =  UIColor.black.cgColor
+        HeaderView.layer.shadowOpacity = 0.2
+        HeaderView.layer.shadowOffset = CGSize(width: 0.1, height: 1.0)
+        HeaderView.layer.shadowRadius = 4.0
+        HeaderView.layer.masksToBounds = false
         // Configure the view for the selected state
     }
 

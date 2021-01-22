@@ -22,8 +22,17 @@ class PastDataVC: UITableViewCell {
     @IBOutlet var stockCollection3: [UILabel]!
     @IBOutlet var stockCollection4: [UILabel]!
     @IBOutlet var stockCollection5: [UILabel]!
+    
+    @IBOutlet var paddingCollection1:[PaddingLabel]!
+    @IBOutlet var paddingCollection2:[PaddingLabel]!
+    @IBOutlet var paddingCollection3:[PaddingLabel]!
+    @IBOutlet var paddingCollection4:[PaddingLabel]!
+    @IBOutlet var paddingCollection5:[PaddingLabel]!
+    
     @IBOutlet weak var contentStack: UIStackView!
     @IBOutlet weak var dropdownButton: UIButton!
+
+    @IBOutlet weak var separator: PaddingLabel!
     
     var index = 0
     var delegate: DropdownCellDelegate?
@@ -33,7 +42,6 @@ class PastDataVC: UITableViewCell {
         // Initialization code
     }
     
-    @IBOutlet weak var bottom: NSLayoutConstraint!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         PDview.layer.cornerRadius = 10
@@ -49,10 +57,15 @@ class PastDataVC: UITableViewCell {
             view.layer.shadowOpacity = 0.2
             view.layer.shadowRadius = 4.0
         }
+        
+        let dropdownGesture = UITapGestureRecognizer(target: self, action: #selector(dropdown(_:)))
+        contentStack.addGestureRecognizer(dropdownGesture)
+
+        
         // Configure the view for the selected state
     }
     
-    @IBAction func dropdown(_ sender: Any) {
+    @objc func dropdown(_ sender: Any) {
         self.delegate?.selectedInfoBtn(index: index)
     }
 }
