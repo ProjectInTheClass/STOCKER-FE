@@ -15,7 +15,7 @@ class DataAPI {
     func getPastData(completion: @escaping (Result<PastStockDataResponse,Error>) -> Void) {
         let decoder = JSONDecoder()
         
-        AF.request("http://everysports.iptime.org:5000/data/pastdata").responseData(completionHandler: {response in
+        AF.request("https://uiui.nashot.io/data/pastdata").responseData(completionHandler: {response in
             switch response.result {
             case .success(let data):
                 do {

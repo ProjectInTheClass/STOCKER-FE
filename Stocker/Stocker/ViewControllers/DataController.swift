@@ -25,6 +25,7 @@ class DataController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataTableView.dataSource = self
+        dataTableView.delegate = self
         dataTableView.estimatedRowHeight = 100
         dataTableView.rowHeight = UITableView.automaticDimension
         DataAPI.shared.getPastData { (result) in
@@ -63,11 +64,11 @@ extension DataController: UITableViewDataSource{
         }
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! LogoVC
-            cell.logoImageView.image = UIImage(named: "Logo")
             return cell
         }else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! HeaderVC
@@ -93,17 +94,17 @@ extension DataController: UITableViewDataSource{
             
             cell.index = indexPath.row
             cell.delegate = self
-            if !weekDataList[indexPath.row].selected {
-                cell.OutView.forEach { subview in
-                    subview.removeFromSuperview()
-        //            contentStack.addArrangedSubview(subview)
-                }
-            } else {
-                cell.OutView.forEach { subview in
-    //                subview.removeFromSuperview()
-                    cell.contentStack.addArrangedSubview(subview)
-                }
-            }
+//            if !weekDataList[indexPath.row].selected {
+//                cell.OutView.forEach { subview in
+//                    subview.removeFromSuperview()
+//        //            contentStack.addArrangedSubview(subview)
+//                }
+//            } else {
+//                cell.OutView.forEach { subview in
+//    //                subview.removeFromSuperview()
+//                    cell.contentStack.addArrangedSubview(subview)
+//                }
+//            }
             
             return cell
         }
@@ -115,4 +116,7 @@ extension DataController: DropdownCellDelegate {
         weekDataList[index].selected = !weekDataList[index].selected
         dataTableView.reloadRows(at: [IndexPath.init(row: index, section: 2)], with: .fade)
     }
+}
+
+extension DataController: UITableViewDelegate {
 }

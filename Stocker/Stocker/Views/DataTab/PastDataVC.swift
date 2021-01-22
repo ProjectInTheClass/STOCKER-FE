@@ -42,13 +42,13 @@ class PastDataVC: UITableViewCell {
         PDview.layer.shadowOpacity = 0.2
         PDview.layer.shadowRadius = 4.0
         
-        for view in OutView {
-            view.layer.cornerRadius = 10
-            view.layer.shadowColor = UIColor.black.cgColor
-            view.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            view.layer.shadowOpacity = 0.2
-            view.layer.shadowRadius = 4.0
-        }
+//        for view in OutView {
+//            view.layer.cornerRadius = 10
+//            view.layer.shadowColor = UIColor.black.cgColor
+//            view.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+//            view.layer.shadowOpacity = 0.2
+//            view.layer.shadowRadius = 4.0
+//        }
         // Configure the view for the selected state
     }
     
