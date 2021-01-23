@@ -25,7 +25,7 @@ const Contents = styled.div`
 
 const BrandLogo = styled.img`
   display: flex;
-  width: 35rem;
+  width: 40rem;
   height: 18rem;
   margin-right: 3rem;
   transition: 0.3s ease-in;

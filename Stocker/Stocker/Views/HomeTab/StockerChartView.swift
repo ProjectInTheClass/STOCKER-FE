@@ -44,7 +44,6 @@ class StockerChartView: UIView, ChartViewDelegate {
         lineChartView.centerInSuperview()
         lineChartView.height(300)
         lineChartView.width(to: self)
-//        lineChartView.heightToWidth(of: self)
         setData(yValues)
     }
     
