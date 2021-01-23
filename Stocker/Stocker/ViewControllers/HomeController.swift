@@ -11,6 +11,8 @@ class HomeController: UIViewController {
     let estivateSectionRows : [Int] = [0,1,2,3,4]
     var selected : [Bool] = [false,true,true,true,true]
     
+    var stockPriceArray : [Double] = []
+    
     var stockerEstimateList : [StockerEstimate] = [] {
         didSet{
             self.homeTableView.reloadData()
@@ -44,10 +46,10 @@ class HomeController: UIViewController {
         StockerChartAPI.shared.getStockerChartData(stockCode: stockListItem.stockCode, completion: { result in
             switch result {
             case .success(let data):
-                let parsedLastPrice : [ChartDataEntry] =  data.lastPrice.enumerated().map{ (index, price) in
+                self.stockPriceArray = data.lastPrice
+                let parsedLastPrice : [ChartDataEntry] =  self.stockPriceArray.enumerated().map{ (index, price) in
                     ChartDataEntry(x: Double(index), y: price)
                 }
-                
                 let stockerEstimateItem : StockerEstimate = StockerEstimate(
                     stockCode: stockListItem.stockCode,
                     stockName: stockListItem.stockName,
@@ -97,17 +99,22 @@ extension HomeController : UITableViewDataSource {
                 var lastTime : String =  String(Int(round(listItem.lastTime)))
                 lastTime.insert(":", at: lastTime.index(lastTime.startIndex, offsetBy: 2))
                 
+                let comparePrice = self.stockPriceArray[stockPriceArray.index(before : self.stockPriceArray.endIndex - 1)]
+                let presentPrice = self.stockPriceArray[stockPriceArray.index(before: self.stockPriceArray.endIndex)]
+                let presentPriceRatio = calculateRatio(presentPrice / comparePrice)
+                let estimatePriceRatio = calculateRatio(listItem.stockEstimatePrice / presentPrice)
+                
                 cell.stockCodeLabel.text = listItem.stockCode
                 cell.stockNameLabel.text = listItem.stockName
-                cell.stockPriceLabel.text = decimalWon(Int(round(listItem.stockPrice)))
-                cell.compareStockPriceRatioLabel.text = "0.34%"
+                cell.stockPriceLabel.text = decimalWon(Int(round(presentPrice)))
+                cell.compareStockPriceRatioLabel.text = String(presentPriceRatio)
                 cell.stockEstimateLabel.text = decimalWon(Int(round(listItem.stockEstimatePrice)))
-                cell.compareStockEstimateRatioLabel.text = "0.34%"
+                cell.compareStockEstimateRatioLabel.text = String(estimatePriceRatio)
                 cell.lastTimeLabel.text = lastTime + " 기준"
                 cell.chartDataEntry = self.stockerEstimateList[indexPath.row].parsedLastPrice
                 cell.chartLimitLineValue = self.stockerEstimateList[indexPath.row].stockEstimatePrice
   
-                if self.selected[indexPath.row] {
+                if !self.selected[indexPath.row] {
                     cell.heightConstraint.constant = 300
                 } else {
                     cell.heightConstraint.constant = 0
@@ -130,6 +137,11 @@ extension HomeController : UITableViewDataSource {
     func calRevenueRatio(key : String, xValue : Double, yValue : Double) -> Double {
         return 10.0
     }
+    
+    func calculateRatio(_ val : Double ) -> Double {
+        return round(val * 100) / 100
+    }
+    
 }
 
 extension HomeController : ComponentProductCellDelegate{

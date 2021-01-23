@@ -229,7 +229,7 @@
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" constant="65.670000000000002" id="kIi-GU-haZ"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                             <userDefinedRuntimeAttributes>
@@ -285,7 +285,7 @@
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" constant="65.670000000000002" id="JN5-Y8-joK"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                             <userDefinedRuntimeAttributes>
@@ -430,13 +430,13 @@
     </scenes>
     <designables>
         <designable name="GN3-ce-XjB">
-            <size key="intrinsicContentSize" width="71" height="26.333333333333332"/>
+            <size key="intrinsicContentSize" width="65.666666666666657" height="26.333333333333332"/>
         </designable>
         <designable name="NrV-98-dWv">
             <size key="intrinsicContentSize" width="2" height="2"/>
         </designable>
         <designable name="iZp-JS-rX7">
-            <size key="intrinsicContentSize" width="71" height="26.333333333333332"/>
+            <size key="intrinsicContentSize" width="65.666666666666657" height="26.333333333333332"/>
         </designable>
     </designables>
     <resources>
