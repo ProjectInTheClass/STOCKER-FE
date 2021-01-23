@@ -59,16 +59,17 @@ const AboutContents = () => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+
   return (
     <Container>
       <BackgroundStyles />
       <Contents data-aos="fade-up">
         <SplashDesc>
-          <h2>STOCKER App을 소개합니다</h2>
-          <p>- 잃어도 뭐라하지마용</p>
-          <p>- 난 돈을 벌거야</p>
-          <p>- 예얍</p>
-          <p>- 벌고 또 벌어</p>
+          <h2>STOCKER를 소개합니다</h2>
+          <p>- AI를 통한 이번 주 종목 상한가 예측</p>
+          <p>- 이번 주 종목 추천</p>
+          <p>- 실시간 차트</p>
+          <p>- 지난 예측 히스토리</p>
         </SplashDesc>
         <Splah src={SplashImg} />
       </Contents>

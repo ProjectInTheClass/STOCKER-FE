@@ -17,7 +17,7 @@ const IndexMainView = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 `;
 
 const MainLogoImg = styled.img`
@@ -27,14 +27,14 @@ const MainLogoImg = styled.img`
   border-width: 1px;
   margin-top: 300px;
   @media screen and (max-width: 767px) {
-    width: 30rem;
-    height: 13rem;
+    width: 100%;
+    /* height: 10rem; */
   }
 `;
 
 const MainBackgroundImg = styled.div`
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   /* Background Fix code */
   background: url(${(props) => props.img}) no-repeat center/cover;
   background-attachment: fixed;
@@ -108,7 +108,7 @@ const IntroContents = () => {
     <IndexContainer>
       <IndexMainView>
         <MainBackgroundImg img={mainImg}>
-          <OpacityBlock height={"85vh"} />
+          <OpacityBlock height={"100vh"} />
           <IndexContextContainer>
             <MainLogoImg src={logoImg} />
           </IndexContextContainer>

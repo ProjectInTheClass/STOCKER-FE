@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import brandLogo from "../img/StockerLogo.png";
+import GhAppIntro from "../img/ghAppIntro.png";
 
 const Container = styled.div`
   width: 100%;
@@ -25,24 +26,16 @@ const Contents = styled.div`
 
 const BrandLogo = styled.img`
   display: flex;
-  width: 40rem;
-  height: 18rem;
-  margin-right: 3rem;
+  width: 60rem;
+  height: 25rem;
   transition: 0.3s ease-in;
   @media screen and (max-width: 767px) {
-    display: none;
+    width: 100%;
+    height: 28rem;
   }
-`;
-
-const BrandDescContainer = styled.div`
-  width: 500px;
-  h1 {
-    margin-top: 0;
-    color: #20c997;
-  }
-  p {
-    color: #868e96;
-    font-weight: bold;
+  @media screen and (max-width: 300px) {
+    width: 100%;
+    height: 10rem;
   }
 `;
 
@@ -50,11 +43,7 @@ const Second = () => {
   return (
     <Container>
       <Contents>
-        <BrandLogo src={brandLogo} />
-        {/* <BrandDescContainer>
-          <h1>STOCKER</h1>
-          <p>얼렁얼렁 개발해버리장~~~</p>
-        </BrandDescContainer> */}
+        <BrandLogo src={GhAppIntro} />
       </Contents>
     </Container>
   );
