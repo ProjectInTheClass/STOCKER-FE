@@ -31,7 +31,7 @@ class DataController: UIViewController {
             switch result {
             case .success(let _pastData):
                 self.pastData = _pastData
-                for weekData in _pastData.weekData {
+                for weekData in _pastData.weakData {
                     self.weekDataList.append(PastStockDataItem(weekData: weekData, selected: false))
                 }
                 self.weekDataList[0].selected = !self.weekDataList[0].selected
@@ -58,7 +58,7 @@ extension DataController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 2:
-            return pastData?.weekData.count ?? 0
+            return pastData?.weakData.count ?? 0
         default:
             return 1
         }
@@ -80,7 +80,26 @@ extension DataController: UITableViewDataSource{
             let paddingCollection = [cell.paddingCollection1,cell.paddingCollection2,cell.paddingCollection3,cell.paddingCollection4,cell.paddingCollection5]
             
             let rowData = weekDataList[indexPath.row].weekData
-            cell.weekLabel.text = rowData.weekIndex
+            var year = ""
+            var month = ""
+            var week = ""
+            for (index, value) in rowData.weekIndex.enumerated(){
+                let str = String(value)
+                if index <= 3 {
+                    year += str
+                } else if index <= 5 {
+                    if str == "0" {
+                        if index == 5 {
+                            month += str
+                        }
+                    } else {
+                        month += str
+                    }
+                } else if index == 6 {
+                    week += str
+                }
+            }
+            cell.weekLabel.text = "\(year)년도 \(month)월 \(week)주차"
             
             for i in 0...4{
                 let stockLabels = labelCollection[i]!
@@ -96,13 +115,13 @@ extension DataController: UITableViewDataSource{
                 
                 print(indexPath.row)
                 let data = rowData.stockList[i]
-                let maxPercent = (data.stockMaxPrice-data.stockEstimatePrice)/data.stockEstimatePrice
-                let estimatePercent = (data.stockMaxPrice-data.stockEstimatePrice)/data.stockEstimatePrice
+                let maxPercent = (data.stockMaxPrice-data.stockFirstPrice)/data.stockFirstPrice
+                let estimatePercent = (data.stockEstimatePrice-data.stockFirstPrice)/data.stockFirstPrice
                 
                 stockLabels[0].text = data.stockCode
                 stockLabels[1].text = data.stockName
-                stockLabels[2].text = "\(data.stockMaxPrice)"
-                stockLabels[3].text = "\(data.stockEstimatePrice)"
+                stockLabels[2].text = "\(round(data.stockMaxPrice*100)/100)"
+                stockLabels[3].text = "\(round(data.stockEstimatePrice*100)/100)"
                 paddingLabels[0].text = "\(round(maxPercent*10000)/100)%"
                 paddingLabels[1].text = "\(round(estimatePercent*10000)/100)%"
 
