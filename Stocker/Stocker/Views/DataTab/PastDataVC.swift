@@ -53,7 +53,7 @@ class PastDataVC: UITableViewCell {
             view.layer.cornerRadius = 10
             view.layer.shadowColor = UIColor.systemGray.cgColor
             view.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            view.layer.shadowOpacity = 0.2
+            view.layer.shadowOpacity = 0.8
             view.layer.shadowRadius = 4.0
         }
         
