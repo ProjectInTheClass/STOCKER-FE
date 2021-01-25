@@ -20,18 +20,16 @@ class StockerChartView: UIView, ChartViewDelegate {
         yAxis.labelFont = .boldSystemFont(ofSize: 12)
         yAxis.setLabelCount(6, force: false)
         yAxis.labelTextColor = #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1)
-        yAxis.axisLineColor = #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1)
+        yAxis.axisLineColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         yAxis.labelPosition = .outsideChart
         
         chartView.xAxis.labelPosition = .bottom
         chartView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         chartView.xAxis.setLabelCount(6, force: false)
         chartView.xAxis.labelTextColor = #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1)
-        chartView.xAxis.axisLineColor = .black
+        chartView.xAxis.axisLineColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-
         chartView.animate(xAxisDuration: 2.5)
-        
         return chartView
     }()
     
@@ -47,8 +45,10 @@ class StockerChartView: UIView, ChartViewDelegate {
         setData(yValues)
     }
     
-    func setChartLimitLine(_ estimatePrice : Double){
-        let ll = ChartLimitLine(limit: estimatePrice, label: "예측값")
+    func setChartLimitLine(_ limitLineProps : [Double] ){
+        let ll = ChartLimitLine(limit: limitLineProps[0], label: "예측값")
+        let offset : Double = 0
+        lineChartView.leftAxis.axisMaximum = limitLineProps[0] > limitLineProps[1] ? limitLineProps[0] + offset : limitLineProps[1] + offset
         lineChartView.leftAxis.addLimitLine(ll)
     }
 
@@ -61,9 +61,11 @@ class StockerChartView: UIView, ChartViewDelegate {
         set1.fill = Fill(color: #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1))
         set1.fillAlpha = 0.5
         set1.drawFilledEnabled = true
-        set1.drawHorizontalHighlightIndicatorEnabled = false
-        set1.highlightColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        set1.drawHorizontalHighlightIndicatorEnabled = true
+        set1.highlightColor = #colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 1)
         set1.highlightLineWidth = 2
+        set1.setDrawHighlightIndicators(true)
+        set1.circleRadius = 5.0
         
         let data = LineChartData(dataSet: set1)
         data.setDrawValues(false)
