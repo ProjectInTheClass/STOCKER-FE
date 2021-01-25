@@ -105,6 +105,16 @@ extension DataController: UITableViewDataSource{
             cell.index = indexPath.row
             cell.delegate = self
             dropdownEvent(selected: weekDataList[indexPath.row].selected, OutView: cell.OutView, contentStack: cell.contentStack)
+            if self.traitCollection.userInterfaceStyle == .dark {
+                for view in cell.OutView {
+                    view.backgroundColor = UIColor.systemGray6
+                }
+            } else {
+                for view in cell.OutView {
+                    view.backgroundColor = UIColor.white
+                }
+            }
+
             return cell
         }
     }
