@@ -18,7 +18,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-k9-Zib">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="separatorColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppLogoTVC" rowHeight="132" id="ubK-WA-acY" customClass="AppLogoTVC" customModule="Stocker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="132"/>
@@ -41,6 +43,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="opu-l3-qVx" secondAttribute="bottom" id="zAW-62-Ync"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="YieldTVC" rowHeight="176" id="kus-DX-F7C" customClass="YieldTVC" customModule="Stocker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="414" height="176"/>
@@ -133,6 +136,7 @@
                                                 <constraint firstItem="zD2-No-pfB" firstAttribute="leading" secondItem="cWT-dt-CKq" secondAttribute="leading" constant="20" id="y7Y-xK-Zre"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <connections>
                                             <outlet property="a" destination="cnG-xz-oen" id="lKT-HB-35i"/>
                                             <outlet property="b" destination="ltw-nv-kIm" id="5dC-u7-nNA"/>
@@ -156,6 +160,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PredictionTVC" rowHeight="564" id="T2k-A7-BqF" customClass="PredictionTVC" customModule="Stocker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="372" width="414" height="564"/>
@@ -197,7 +202,7 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="354" height="26.333333333333332"/>
                                                                                     <subviews>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o0E-Ug-fb1">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="278.33333333333331" height="26.333333333333332"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="26.333333333333332"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-bL-jHr">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="22" height="26.333333333333332"/>
@@ -216,7 +221,7 @@
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stockPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYh-Qb-HMj">
-                                                                                                    <rect key="frame" x="95.666666666666671" y="0.0" width="182.66666666666663" height="26.333333333333332"/>
+                                                                                                    <rect key="frame" x="95.666666666666671" y="0.0" width="173.33333333333331" height="26.333333333333332"/>
                                                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                                                     <nil key="textColor"/>
@@ -224,10 +229,10 @@
                                                                                                 </label>
                                                                                             </subviews>
                                                                                         </stackView>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0.12%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-ce-XjB" customClass="PaddingLabel" customModule="Stocker" customModuleProvider="target">
-                                                                                            <rect key="frame" x="288.33333333333331" y="0.0" width="65.666666666666686" height="26.333333333333332"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0.12%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-ce-XjB" customClass="PaddingLabel" customModule="Stocker" customModuleProvider="target">
+                                                                                            <rect key="frame" x="279" y="0.0" width="75" height="26.333333333333332"/>
                                                                                             <constraints>
-                                                                                                <constraint firstAttribute="width" constant="65.670000000000002" id="kIi-GU-haZ"/>
+                                                                                                <constraint firstAttribute="width" constant="75" id="kIi-GU-haZ"/>
                                                                                             </constraints>
                                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -253,7 +258,7 @@
                                                                                     <rect key="frame" x="0.0" y="34.333333333333329" width="354" height="26.333333333333329"/>
                                                                                     <subviews>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lFd-XI-WWS">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="278.33333333333331" height="26.333333333333332"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="26.333333333333332"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-y6-nkm">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="22" height="26.333333333333332"/>
@@ -272,7 +277,7 @@
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stockEsimate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-zk-2qI">
-                                                                                                    <rect key="frame" x="95.333333333333314" y="0.0" width="183" height="26.333333333333332"/>
+                                                                                                    <rect key="frame" x="95.333333333333329" y="0.0" width="173.66666666666669" height="26.333333333333332"/>
                                                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                                                     <nil key="textColor"/>
@@ -280,12 +285,12 @@
                                                                                                 </label>
                                                                                             </subviews>
                                                                                         </stackView>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0.12%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZp-JS-rX7" customClass="PaddingLabel" customModule="Stocker" customModuleProvider="target">
-                                                                                            <rect key="frame" x="288.33333333333331" y="0.0" width="65.666666666666686" height="26.333333333333332"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0.12%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZp-JS-rX7" customClass="PaddingLabel" customModule="Stocker" customModuleProvider="target">
+                                                                                            <rect key="frame" x="279" y="0.0" width="75" height="26.333333333333332"/>
                                                                                             <constraints>
-                                                                                                <constraint firstAttribute="width" constant="65.670000000000002" id="JN5-Y8-joK"/>
+                                                                                                <constraint firstAttribute="width" constant="75" id="JN5-Y8-joK"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                             <userDefinedRuntimeAttributes>
@@ -387,7 +392,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="FG2-zn-dK4" secondAttribute="bottom" constant="20" id="i3N-7N-XBY"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <connections>
                                             <outlet property="barLabel" destination="NrV-98-dWv" id="qna-AE-2LT"/>
                                             <outlet property="compareStockEstimateRatioLabel" destination="iZp-JS-rX7" id="W1C-Y5-hsf"/>
@@ -408,7 +413,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PkE-wo-jFu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="ec8-k9-Zib" firstAttribute="top" secondItem="PkE-wo-jFu" secondAttribute="top" id="9dl-kd-Kje"/>
                             <constraint firstItem="PkE-wo-jFu" firstAttribute="trailing" secondItem="ec8-k9-Zib" secondAttribute="trailing" id="MwG-k3-hHW"/>
@@ -436,7 +441,7 @@
             <size key="intrinsicContentSize" width="2" height="2"/>
         </designable>
         <designable name="iZp-JS-rX7">
-            <size key="intrinsicContentSize" width="65.666666666666657" height="26.333333333333332"/>
+            <size key="intrinsicContentSize" width="63" height="25.333333333333332"/>
         </designable>
     </designables>
     <resources>
@@ -450,6 +455,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

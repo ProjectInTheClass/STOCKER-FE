@@ -23,8 +23,14 @@ class PredictionTVC: UITableViewCell {
     @IBOutlet weak var barLabel: PaddingLabel!
     @IBOutlet weak var stockerChartView: StockerChartView!
     
+    
+    
+    let plusBackgroundColor : UIColor = #colorLiteral(red: 0.9684663415, green: 0.3563124835, blue: 0.5123978257, alpha: 1)
+    let minusBackgroundColor : UIColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
+
     var index: Int = 0
     var delegate: ComponentProductCellDelegate?
+    
     
     var chartDataEntry : [ChartDataEntry] = [] {
         didSet{
@@ -39,6 +45,18 @@ class PredictionTVC: UITableViewCell {
             if stockerChartView != nil {
                 stockerChartView.setChartLimitLine(chartLimitLineProps)
             }
+        }
+    }
+    
+    var ratioValues : [Double] = [] {
+        didSet{
+            let stockPriceLabelPrefix : String = ratioValues[0] >= 0 ? "+" : ""
+            let estimatePriceLabelPrefix : String = ratioValues[1] >= 1 ? "달성" : "미달성"
+             
+            compareStockPriceRatioLabel.text = "\(stockPriceLabelPrefix)\(ratioValues[0])%"
+            compareStockEstimateRatioLabel.text = estimatePriceLabelPrefix
+            compareStockPriceRatioLabel.backgroundColor = ratioValues[0] >= 0.0 ? plusBackgroundColor : minusBackgroundColor
+            compareStockEstimateRatioLabel.backgroundColor = ratioValues[1] >= 1.0 ? plusBackgroundColor : minusBackgroundColor
         }
     }
 

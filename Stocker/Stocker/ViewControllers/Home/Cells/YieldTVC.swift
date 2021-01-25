@@ -19,9 +19,9 @@ class YieldTVC: UITableViewCell {
         RevenueAPI.shared.getRevenueData(completion: { result in
             switch result {
             case .success(let _revenue):
-                self.cumRevenueLabel.text =
-                    String(_revenue.cumRevenue)
-                self.lastRevenueLabel.text = String(_revenue.lastRevenue)
+                self.cumRevenueLabel.text = "\(self.calculateRatio(_revenue.cumRevenue))%"
+                self.lastRevenueLabel.text = "\(self.calculateRatio(_revenue.lastRevenue))%"
+                
                 self.revenue.append(_revenue.cumRevenue)
                 self.revenue.append(_revenue.lastRevenue)
             case .failure(let error):
@@ -31,10 +31,14 @@ class YieldTVC: UITableViewCell {
         
         setCustomViewStyles()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
+    }
+    
+    func calculateRatio(_ val : Double ) -> Double {
+        return round(val * 1000) / 10
     }
  
     func setCustomViewStyles() {
