@@ -44,14 +44,14 @@ class PastDataVC: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         PDview.layer.cornerRadius = 10
-        PDview.layer.shadowColor = UIColor.black.cgColor
+        PDview.layer.shadowColor = UIColor.systemGray.cgColor
         PDview.layer.shadowOffset = CGSize(width: 0, height: 1.0)
         PDview.layer.shadowOpacity = 0.05
         PDview.layer.shadowRadius = 4.0
         
         for view in OutView {
             view.layer.cornerRadius = 10
-            view.layer.shadowColor = UIColor.black.cgColor
+            view.layer.shadowColor = UIColor.systemGray.cgColor
             view.layer.shadowOffset = CGSize(width: 0, height: 1.0)
             view.layer.shadowOpacity = 0.2
             view.layer.shadowRadius = 4.0
