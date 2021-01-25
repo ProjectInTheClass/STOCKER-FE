@@ -100,14 +100,17 @@ extension HomeController : UITableViewDataSource {
                 lastTime.insert(":", at: lastTime.index(lastTime.startIndex, offsetBy: 2))
                 let maximumLastPrice : Double = self.stockPriceArray[indexPath.row].max()!
                 
-                let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray.startIndex]
-                let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray.index(before: self.stockPriceArray.endIndex)]
-                let presentPriceRatio = calculateRatio(1 - (presentPrice / comparePrice))
+                let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].startIndex]
+                let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].index(before: self.stockPriceArray[indexPath.row].endIndex)]
+                let presentPriceRatio = calculateRatio((presentPrice / comparePrice) - 1)
                 let estimatePriceRatio = self.stockPriceArray[indexPath.row].max()! / listItem.stockEstimatePrice
                 cell.ratioValues = [presentPriceRatio, estimatePriceRatio]
                 
                 cell.stockCodeLabel.text = listItem.stockCode
                 cell.stockNameLabel.text = listItem.stockName
+                
+                
+                
                 cell.stockPriceLabel.text = decimalWon(Int(round(presentPrice)))
                 cell.stockEstimateLabel.text = decimalWon(Int(round(listItem.stockEstimatePrice)))
                 cell.lastTimeLabel.text = lastTime + " 기준"
