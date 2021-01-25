@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,9 +37,23 @@
                                                         <constraint firstAttribute="height" constant="85" id="vX4-cy-cAD"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-Aa-p79">
+                                                    <rect key="frame" x="368" y="51.666666666666664" width="26" height="28.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" red="0.38401520249999999" green="0.48149061199999998" blue="0.94122141599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="hue-dV-1kk" kind="presentation" id="bgW-kf-pgC"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="eEC-Aa-p79" secondAttribute="trailing" constant="20" id="Cgd-3c-yYR"/>
                                                 <constraint firstItem="opu-l3-qVx" firstAttribute="top" secondItem="pIN-5f-D0u" secondAttribute="top" id="fn0-dI-Cxo"/>
+                                                <constraint firstItem="eEC-Aa-p79" firstAttribute="centerY" secondItem="pIN-5f-D0u" secondAttribute="centerY" id="njB-zA-kiB"/>
                                                 <constraint firstItem="opu-l3-qVx" firstAttribute="leading" secondItem="pIN-5f-D0u" secondAttribute="leading" constant="15" id="tBb-OQ-agq"/>
                                                 <constraint firstAttribute="bottom" secondItem="opu-l3-qVx" secondAttribute="bottom" id="zAW-62-Ync"/>
                                             </constraints>
@@ -432,6 +447,84 @@
             </objects>
             <point key="canvasLocation" x="-715.94202898550725" y="-192.39130434782609"/>
         </scene>
+        <!--Setting Controller-->
+        <scene sceneID="97N-ji-Is9">
+            <objects>
+                <viewController id="hue-dV-1kk" customClass="SettingController" customModule="Stocker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rDZ-cS-QbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="86N-Jp-Zh8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingTitleTVC" rowHeight="150" id="dOP-Z4-jWD" customClass="SettingTitleTVC" customModule="Stocker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dOP-Z4-jWD" id="yvH-qB-aFl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg2-rN-tEe">
+                                                    <rect key="frame" x="20" y="20" width="52" height="110"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qg2-rN-tEe" firstAttribute="leading" secondItem="yvH-qB-aFl" secondAttribute="leading" constant="20" id="480-5H-3h1"/>
+                                                <constraint firstAttribute="bottom" secondItem="qg2-rN-tEe" secondAttribute="bottom" constant="20" id="jAi-kf-vTE"/>
+                                                <constraint firstItem="qg2-rN-tEe" firstAttribute="top" secondItem="yvH-qB-aFl" secondAttribute="top" constant="20" id="qHS-Lf-msk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomInfoTVC" rowHeight="53" id="bFq-a7-thf" customClass="CustomInfoTVC" customModule="Stocker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bFq-a7-thf" id="MWh-rl-ibZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5x0-fv-hzf">
+                                                    <rect key="frame" x="20" y="10" width="108" height="33"/>
+                                                    <state key="normal" title="개인정보 처리방침"/>
+                                                    <connections>
+                                                        <action selector="openUrl:" destination="bFq-a7-thf" eventType="touchUpInside" id="dkk-YH-LF8"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="5x0-fv-hzf" secondAttribute="bottom" constant="10" id="nIW-aL-3Bf"/>
+                                                <constraint firstItem="5x0-fv-hzf" firstAttribute="leading" secondItem="MWh-rl-ibZ" secondAttribute="leading" constant="20" id="q2V-GH-VDb"/>
+                                                <constraint firstItem="5x0-fv-hzf" firstAttribute="top" secondItem="MWh-rl-ibZ" secondAttribute="top" constant="10" id="rpr-nc-Lq8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="openUrlButton" destination="MWh-rl-ibZ" id="8JI-xg-v5Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ig3-U9-SEX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="86N-Jp-Zh8" firstAttribute="top" secondItem="Ig3-U9-SEX" secondAttribute="top" id="3tk-3V-kyK"/>
+                            <constraint firstItem="Ig3-U9-SEX" firstAttribute="trailing" secondItem="86N-Jp-Zh8" secondAttribute="trailing" id="B9j-nv-1C7"/>
+                            <constraint firstItem="86N-Jp-Zh8" firstAttribute="leading" secondItem="Ig3-U9-SEX" secondAttribute="leading" id="DRs-R7-whe"/>
+                            <constraint firstItem="Ig3-U9-SEX" firstAttribute="bottom" secondItem="86N-Jp-Zh8" secondAttribute="bottom" id="qhT-Ut-crn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="settingTableView" destination="86N-Jp-Zh8" id="u19-iZ-Pdu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kau-H0-35d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="-287.77173913043481"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="GN3-ce-XjB">
@@ -447,6 +540,7 @@
     <resources>
         <image name="Logo" width="160" height="67"/>
         <image name="dollarsign" width="12" height="12"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="hexagon" catalog="system" width="128" height="124"/>
         <image name="hexagon.fill" catalog="system" width="128" height="124"/>
         <image name="timer" width="12" height="12"/>
