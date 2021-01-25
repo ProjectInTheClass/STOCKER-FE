@@ -27,6 +27,7 @@ class DataController: UIViewController {
         dataTableView.dataSource = self
         dataTableView.estimatedRowHeight = 100
         dataTableView.rowHeight = UITableView.automaticDimension
+        dataTableView.backgroundColor = UIColor.systemGray6
         DataAPI.shared.getPastData { (result) in
             switch result {
             case .success(let _pastData):
@@ -82,6 +83,8 @@ extension DataController: UITableViewDataSource{
             let rowData = weekDataList[indexPath.row].weekData
             cell.weekLabel.text = nowWeekIndex(weekIndex: rowData.weekIndex)
             
+            var totalRevenue:Double = 1
+            
             for i in 0...4{
                 let stockLabels = labelCollection[i]!
                 let paddingLabels = paddingCollection[i]!
@@ -94,13 +97,11 @@ extension DataController: UITableViewDataSource{
                 
                 let maxPercent = calPercent(data.stockMaxPrice, data.stockFirstPrice)
                 let estimatePercent = calPercent(data.stockEstimatePrice, data.stockFirstPrice)
-                paddingLabels[0].text = "\(maxPercent)%"
-                paddingLabels[1].text = "\(estimatePercent)%"
                 setLabelLayout(percent: maxPercent, paddingLabel: paddingLabels[0])
                 setLabelLayout(percent: estimatePercent, paddingLabel: paddingLabels[1])
-                
+                totalRevenue *= calTotalRevenue(maxPercent, estimatePercent)
             }
-            
+            setTotalRevenueLabel(totalRevenue: totalRevenue, label: cell.totalRevenueLabel)
             cell.index = indexPath.row
             cell.delegate = self
             dropdownEvent(selected: weekDataList[indexPath.row].selected, OutView: cell.OutView, contentStack: cell.contentStack)
@@ -114,6 +115,24 @@ extension DataController: DropdownCellDelegate {
         weekDataList[index].selected = !weekDataList[index].selected
         dataTableView.reloadRows(at: [IndexPath.init(row: index, section: 2)], with: .fade)
     }
+}
+
+func setTotalRevenueLabel(totalRevenue:Double, label:PaddingLabel) {
+    
+    label.layer.masksToBounds = true
+    label.layer.cornerRadius = 5
+    label.clipsToBounds = true
+    if totalRevenue >= 1 {
+        label.backgroundColor = #colorLiteral(red: 0.9684663415, green: 0.3563124835, blue: 0.5123978257, alpha: 1)
+        label.text = "+\(round((totalRevenue - 1) * 10000)/100)%"
+    } else {
+        label.backgroundColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
+        label.text = "\(Int(round((totalRevenue - 1) * 100)))%"
+    }
+}
+
+func calTotalRevenue(_ maxPercent:Double, _ estimatePercent:Double) -> Double {
+    return min(1+maxPercent/100, 1+estimatePercent/100)
 }
 
 func nowWeekIndex(weekIndex:String)->String{
@@ -155,12 +174,12 @@ func setLabelLayout(percent: Double, paddingLabel:PaddingLabel){
     paddingLabel.layer.masksToBounds = true
     paddingLabel.layer.cornerRadius = 5
     paddingLabel.clipsToBounds = true
-    if percent > 0 {
-        paddingLabel.backgroundColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
-    } else if percent == 0 {
-        paddingLabel.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-    } else {
+    if percent >= 0 {
         paddingLabel.backgroundColor = #colorLiteral(red: 0.9684663415, green: 0.3563124835, blue: 0.5123978257, alpha: 1)
+        paddingLabel.text = "+\(percent)%"
+    } else {
+        paddingLabel.backgroundColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
+        paddingLabel.text = "\(percent)%"
     }
 }
 

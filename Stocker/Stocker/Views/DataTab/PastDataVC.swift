@@ -30,9 +30,8 @@ class PastDataVC: UITableViewCell {
     @IBOutlet var paddingCollection5:[PaddingLabel]!
     
     @IBOutlet weak var contentStack: UIStackView!
-    @IBOutlet weak var dropdownButton: UIButton!
 
-    @IBOutlet weak var separator: PaddingLabel!
+    @IBOutlet weak var totalRevenueLabel: PaddingLabel!
     
     var index = 0
     var delegate: DropdownCellDelegate?
@@ -47,7 +46,7 @@ class PastDataVC: UITableViewCell {
         PDview.layer.cornerRadius = 10
         PDview.layer.shadowColor = UIColor.black.cgColor
         PDview.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        PDview.layer.shadowOpacity = 0.2
+        PDview.layer.shadowOpacity = 0.05
         PDview.layer.shadowRadius = 4.0
         
         for view in OutView {
