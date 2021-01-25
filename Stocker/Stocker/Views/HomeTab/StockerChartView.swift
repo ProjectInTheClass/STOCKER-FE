@@ -47,8 +47,8 @@ class StockerChartView: UIView, ChartViewDelegate {
     
     func setChartLimitLine(_ limitLineProps : [Double] ){
         let ll = ChartLimitLine(limit: limitLineProps[0], label: "예측값")
-        let offset : Double = 0
-        lineChartView.leftAxis.axisMaximum = limitLineProps[0] > limitLineProps[1] ? limitLineProps[0] + offset : limitLineProps[1] + offset
+//        let offset : Double = 0
+//        lineChartView.leftAxis.axisMaximum = limitLineProps[0] > limitLineProps[1] ? limitLineProps[0] + offset : limitLineProps[1] + offset
         lineChartView.leftAxis.addLimitLine(ll)
     }
 

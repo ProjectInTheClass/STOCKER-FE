@@ -22,6 +22,7 @@ class HomeController: UIViewController {
         super.viewDidLoad()
     
         homeTableView.dataSource = self
+        homeTableView.backgroundColor = UIColor.systemGray6
         self.homeTableView.estimatedRowHeight = 200
         self.homeTableView.rowHeight = UITableView.automaticDimension
         //Data Parsing
@@ -101,15 +102,14 @@ extension HomeController : UITableViewDataSource {
                 
                 let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray.startIndex]
                 let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray.index(before: self.stockPriceArray.endIndex)]
-                let presentPriceRatio = calculateRatio(presentPrice / comparePrice)
-                let estimatePriceRatio = calculateRatio(presentPrice / listItem.stockEstimatePrice)
-
+                let presentPriceRatio = calculateRatio(1 - (presentPrice / comparePrice))
+                let estimatePriceRatio = self.stockPriceArray[indexPath.row].max()! / listItem.stockEstimatePrice
+                cell.ratioValues = [presentPriceRatio, estimatePriceRatio]
+                
                 cell.stockCodeLabel.text = listItem.stockCode
                 cell.stockNameLabel.text = listItem.stockName
                 cell.stockPriceLabel.text = decimalWon(Int(round(presentPrice)))
-                cell.compareStockPriceRatioLabel.text = String(presentPriceRatio)
                 cell.stockEstimateLabel.text = decimalWon(Int(round(listItem.stockEstimatePrice)))
-                cell.compareStockEstimateRatioLabel.text = String(estimatePriceRatio)
                 cell.lastTimeLabel.text = lastTime + " 기준"
                 cell.chartDataEntry = self.stockerEstimateList[indexPath.row].parsedLastPrice
                 cell.chartLimitLineProps = [self.stockerEstimateList[indexPath.row].stockEstimatePrice, maximumLastPrice]
@@ -120,7 +120,6 @@ extension HomeController : UITableViewDataSource {
                     cell.heightConstraint.constant = 0
                 }
             }
-            
             return cell
         } else {
             return  self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.row]) as! PredictionTitleTVC
@@ -139,7 +138,7 @@ extension HomeController : UITableViewDataSource {
     }
     
     func calculateRatio(_ val : Double ) -> Double {
-        return round(val * 100) / 100
+        return round(val * 10000) / 100
     }
     
 }
