@@ -31,7 +31,7 @@ class DataController: UIViewController {
             switch result {
             case .success(let _pastData):
                 self.pastData = _pastData
-                for weekData in _pastData.weakData {
+                for weekData in _pastData.weekData {
                     self.weekDataList.append(PastStockDataItem(weekData: weekData, selected: false))
                 }
                 self.weekDataList[0].selected = !self.weekDataList[0].selected
@@ -58,7 +58,7 @@ extension DataController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 2:
-            return pastData?.weakData.count ?? 0
+            return pastData?.weekData.count ?? 0
         default:
             return 1
         }
@@ -75,88 +75,35 @@ extension DataController: UITableViewDataSource{
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier[indexPath.section], for: indexPath) as! PastDataVC
-            let labelCollection = [cell.stockCollection1,cell.stockCollection2,cell.stockCollection3,cell.stockCollection4,cell.stockCollection5]
             
+            let labelCollection = [cell.stockCollection1,cell.stockCollection2,cell.stockCollection3,cell.stockCollection4,cell.stockCollection5]
             let paddingCollection = [cell.paddingCollection1,cell.paddingCollection2,cell.paddingCollection3,cell.paddingCollection4,cell.paddingCollection5]
             
             let rowData = weekDataList[indexPath.row].weekData
-            var year = ""
-            var month = ""
-            var week = ""
-            for (index, value) in rowData.weekIndex.enumerated(){
-                let str = String(value)
-                if index <= 3 {
-                    year += str
-                } else if index <= 5 {
-                    if str == "0" {
-                        if index == 5 {
-                            month += str
-                        }
-                    } else {
-                        month += str
-                    }
-                } else if index == 6 {
-                    week += str
-                }
-            }
-            cell.weekLabel.text = "\(year)년도 \(month)월 \(week)주차"
+            cell.weekLabel.text = nowWeekIndex(weekIndex: rowData.weekIndex)
             
             for i in 0...4{
                 let stockLabels = labelCollection[i]!
                 let paddingLabels = paddingCollection[i]!
-                
-                paddingLabels[0].layer.masksToBounds = true
-                paddingLabels[0].layer.cornerRadius = 5
-                paddingLabels[0].clipsToBounds = true
-                
-                paddingLabels[1].layer.masksToBounds = true
-                paddingLabels[1].layer.cornerRadius = 5
-                paddingLabels[1].clipsToBounds = true
-                
-                print(indexPath.row)
                 let data = rowData.stockList[i]
-                let maxPercent = (data.stockMaxPrice-data.stockFirstPrice)/data.stockFirstPrice
-                let estimatePercent = (data.stockEstimatePrice-data.stockFirstPrice)/data.stockFirstPrice
                 
                 stockLabels[0].text = data.stockCode
                 stockLabels[1].text = data.stockName
-                stockLabels[2].text = "\(round(data.stockMaxPrice*100)/100)"
-                stockLabels[3].text = "\(round(data.stockEstimatePrice*100)/100)"
-                paddingLabels[0].text = "\(round(maxPercent*10000)/100)%"
-                paddingLabels[1].text = "\(round(estimatePercent*10000)/100)%"
-
+                stockLabels[2].text = decimalWon(Int(round(data.stockMaxPrice)))
+                stockLabels[3].text = decimalWon(Int(round(data.stockEstimatePrice)))
                 
-                if maxPercent > 0 {
-                    paddingLabels[0].backgroundColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
-                } else if maxPercent == 0 {
-                    paddingLabels[0].backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-                } else {
-                    paddingLabels[0].backgroundColor = #colorLiteral(red: 0.9684663415, green: 0.3563124835, blue: 0.5123978257, alpha: 1)
-                }
+                let maxPercent = calPercent(data.stockMaxPrice, data.stockFirstPrice)
+                let estimatePercent = calPercent(data.stockEstimatePrice, data.stockFirstPrice)
+                paddingLabels[0].text = "\(maxPercent)%"
+                paddingLabels[1].text = "\(estimatePercent)%"
+                setLabelLayout(percent: maxPercent, paddingLabel: paddingLabels[0])
+                setLabelLayout(percent: estimatePercent, paddingLabel: paddingLabels[1])
                 
-                if estimatePercent > 0 {
-                    paddingLabels[1].backgroundColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
-                } else if estimatePercent == 0 {
-                    paddingLabels[1].backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-                } else {
-                    paddingLabels[1].backgroundColor = #colorLiteral(red: 0.9684663415, green: 0.3563124835, blue: 0.5123978257, alpha: 1)
-                }
             }
             
             cell.index = indexPath.row
             cell.delegate = self
-            if !weekDataList[indexPath.row].selected {
-                cell.OutView.forEach { subview in
-                    subview.removeFromSuperview()
-        //            contentStack.addArrangedSubview(subview)
-                }
-            } else {
-                cell.OutView.forEach { subview in
-    //                subview.removeFromSuperview()
-                    cell.contentStack.addArrangedSubview(subview)
-                }
-            }
-            
+            dropdownEvent(selected: weekDataList[indexPath.row].selected, OutView: cell.OutView, contentStack: cell.contentStack)
             return cell
         }
     }
@@ -166,5 +113,65 @@ extension DataController: DropdownCellDelegate {
     func selectedInfoBtn(index: Int) {
         weekDataList[index].selected = !weekDataList[index].selected
         dataTableView.reloadRows(at: [IndexPath.init(row: index, section: 2)], with: .fade)
+    }
+}
+
+func nowWeekIndex(weekIndex:String)->String{
+    var year = ""
+    var month = ""
+    var week = ""
+    
+    for (index, value) in weekIndex.enumerated(){
+        let str = String(value)
+        if index <= 3 {
+            year += str
+        } else if index <= 5 {
+            if str == "0" {
+                if index == 5 {
+                    month += str
+                }
+            } else {
+                month += str
+            }
+        } else if index == 6 {
+            week += str
+        }
+    }
+    return "\(year)년도 \(month)월 \(week)주차"
+}
+
+func decimalWon(_ value: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let result = numberFormatter.string(from: NSNumber(value: value))! + " 원"
+        return result
+}
+
+func calPercent(_ val1: Double, _ val2: Double) -> Double {
+    return round((val1 - val2) / val2 * 10000) / 100
+}
+
+func setLabelLayout(percent: Double, paddingLabel:PaddingLabel){
+    paddingLabel.layer.masksToBounds = true
+    paddingLabel.layer.cornerRadius = 5
+    paddingLabel.clipsToBounds = true
+    if percent > 0 {
+        paddingLabel.backgroundColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
+    } else if percent == 0 {
+        paddingLabel.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    } else {
+        paddingLabel.backgroundColor = #colorLiteral(red: 0.9684663415, green: 0.3563124835, blue: 0.5123978257, alpha: 1)
+    }
+}
+
+func dropdownEvent(selected:Bool,OutView:[UIView], contentStack:UIStackView){
+    if !selected {
+        OutView.forEach { subview in
+            subview.removeFromSuperview()
+        }
+    } else {
+        OutView.forEach { subview in
+            contentStack.addArrangedSubview(subview)
+        }
     }
 }

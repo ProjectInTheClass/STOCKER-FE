@@ -15,7 +15,7 @@ struct PastStockDataItem {
 }
 
 struct PastStockDataResponse: Codable {
-    var weakData: [WeekStockData]
+    var weekData: [WeekStockData]
 //    var cumRevenue: Float
 }
 
@@ -27,7 +27,7 @@ struct WeekStockData: Codable {
 struct PastStock: Codable {
     var stockCode: String
     var stockName: String
-    var stockMaxPrice: Float
-    var stockFirstPrice: Float
-    var stockEstimatePrice: Float
+    var stockMaxPrice: Double
+    var stockFirstPrice: Double
+    var stockEstimatePrice: Double
 }
