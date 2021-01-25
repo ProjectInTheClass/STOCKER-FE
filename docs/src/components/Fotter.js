@@ -110,6 +110,9 @@ const Fotter = () => {
         <br />
         <p>© 2021 by stocker.</p>
       </FotterScript>
+      <FotterScript>
+        <p>Contact us : himelo@himelo.co.kr</p>
+      </FotterScript>
     </FotterContainer>
   );
 };

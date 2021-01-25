@@ -31,11 +31,16 @@ const BrandLogo = styled.img`
   transition: 0.3s ease-in;
   @media screen and (max-width: 767px) {
     width: 100%;
-    height: 28rem;
+    height: 20rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 15rem;
   }
   @media screen and (max-width: 300px) {
     width: 100%;
-    height: 10rem;
+    height: 8rem;
   }
 `;
 

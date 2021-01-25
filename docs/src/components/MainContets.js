@@ -6,6 +6,10 @@ import Slider from "./Slider";
 import Review from "./Review";
 import AboutContents from "./AboutContents";
 import PricingPolicy from "./PricingPolicy";
+import StockerHome from "./StockerHome";
+import StockerHomeContents from "./StockerHomeContents";
+import StockerData from "./StockerData";
+import Developer from "./Developer";
 import Map from "./Map";
 import Fotter from "./Fotter";
 
@@ -20,9 +24,13 @@ const MainContets = () => {
       <IntroContents />
       <Second />
       <AboutContents />
-      <Slider />
-      <PricingPolicy />
-      <Review />
+      <StockerHome />
+      <StockerHomeContents />
+      <StockerData />
+      <Developer />
+      {/* <Slider /> */}
+      {/* <PricingPolicy /> */}
+      {/* <Review /> */}
       <Fotter />
     </>
   );
