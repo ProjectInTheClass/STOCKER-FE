@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import SplashImg from "../img/splash.png";
+import StockerDataImage from "../img/data.png";
 
 const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  background: #fff;
+  padding-top: 50px;
 `;
 
 const Contents = styled.div`
@@ -40,44 +42,39 @@ const SplashDesc = styled.div`
 `;
 
 const Splah = styled.img`
-  width: 300px;
+  width: 350px;
   @media screen and (max-width: 767px) {
     width: 150px;
   }
 `;
 
 const BackgroundStyles = styled.div`
-  position: absolute;
-  /* bottom: 0px; */
   width: 100%;
   height: 150px;
   /* background: #4dabf7; */
+  position: absolute;
   transform: translate(0, 270%);
   z-index: -1;
 `;
 
-const AboutContents = () => {
+const StockerData = () => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
 
   return (
-    <>
-      <Container>
-        <BackgroundStyles />
-        <Contents data-aos="fade-up">
-          <SplashDesc>
-            <h2>STOCKER를 소개합니다</h2>
-            <p>- AI를 통한 이번 주 종목 상한가 예측</p>
-            <p>- 이번 주 종목 추천</p>
-            <p>- 실시간 차트</p>
-            <p>- 지난 예측 히스토리</p>
-          </SplashDesc>
-          <Splah src={SplashImg} />
-        </Contents>
-      </Container>
-    </>
+    <Container>
+      <BackgroundStyles />
+      <Contents data-aos="fade-left">
+        <SplashDesc>
+          <h2>STOCKER Data</h2>
+          <p>- 지난 주차의 히스토리 기록</p>
+          <p>- STOCKER AI 정확도를 한눈에 확인</p>
+        </SplashDesc>
+        <Splah src={StockerDataImage} />
+      </Contents>
+    </Container>
   );
 };
 
-export default AboutContents;
+export default StockerData;

@@ -28,6 +28,13 @@ const MainLogoImg = styled.img`
   margin-top: 300px;
   @media screen and (max-width: 767px) {
     width: 100%;
+    height: 17rem;
+    /* height: 10rem; */
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 13rem;
     /* height: 10rem; */
   }
 `;
