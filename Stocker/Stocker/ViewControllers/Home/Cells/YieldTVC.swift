@@ -38,7 +38,7 @@ class YieldTVC: UITableViewCell {
     }
     
     func calculateRatio(_ val : Double ) -> Double {
-        return round(val * 1000) / 10
+        return round((val - 1) * 1000) / 10
     }
  
     func setCustomViewStyles() {
