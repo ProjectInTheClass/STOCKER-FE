@@ -34,18 +34,11 @@ class PredictionTVC: UITableViewCell {
         }
     }
     
-    var chartLimitLineValue : Double = 0.0 {
+    var chartLimitLineProps : [Double] = [] {
         didSet{
             if stockerChartView != nil {
-                stockerChartView.setChartLimitLine(chartLimitLineValue)
+                stockerChartView.setChartLimitLine(chartLimitLineProps)
             }
-        }
-    }
-    
-    var isReloaded : Bool = false {
-        didSet{
-            stockerChartView.setUp(chartDataEntry)
-            stockerChartView.setChartLimitLine(chartLimitLineValue)
         }
     }
 
