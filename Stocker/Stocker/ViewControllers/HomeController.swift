@@ -97,7 +97,7 @@ extension HomeController : UITableViewDataSource {
             if self.stockerEstimateList.count == 5 {
                 let listItem : StockerEstimate = self.stockerEstimateList[indexPath.row]
                 var lastTime : String =  String(Int(round(listItem.lastTime)))
-                lastTime.insert(":", at: lastTime.index(lastTime.startIndex, offsetBy: 2))
+                lastTime.insert(":", at: lastTime.index(lastTime.endIndex, offsetBy: -2))
                 let maximumLastPrice : Double = self.stockPriceArray[indexPath.row].max()!
                 
                 let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].startIndex]
@@ -108,8 +108,6 @@ extension HomeController : UITableViewDataSource {
                 
                 cell.stockCodeLabel.text = listItem.stockCode
                 cell.stockNameLabel.text = listItem.stockName
-                
-                
                 
                 cell.stockPriceLabel.text = decimalWon(Int(round(presentPrice)))
                 cell.stockEstimateLabel.text = decimalWon(Int(round(listItem.stockEstimatePrice)))
