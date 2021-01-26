@@ -120,7 +120,7 @@ extension HomeController : UITableViewDataSource {
                 
                 let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].startIndex]
                 let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].index(before: self.stockPriceArray[indexPath.row].endIndex)]
-                let presentPriceRatio = calculateRatio((presentPrice / comparePrice) - 1)
+                let presentPriceRatio = calculateRatio((presentPrice / listItem.stockPrice) - 1)
                 let estimatePriceRatio = self.stockPriceArray[indexPath.row].max()! / listItem.stockEstimatePrice
                 cell.ratioValues = [presentPriceRatio, estimatePriceRatio]
                 
