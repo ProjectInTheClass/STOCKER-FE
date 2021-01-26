@@ -25,6 +25,7 @@ class HomeController: UIViewController {
         homeTableView.backgroundColor = UIColor.systemGray6
         self.homeTableView.estimatedRowHeight = 200
         self.homeTableView.rowHeight = UITableView.automaticDimension
+        initRefresh()
         //Data Parsing
         getStockListData()
     }
@@ -59,12 +60,29 @@ class HomeController: UIViewController {
                     parsedLastPrice: parsedLastPrice
                 )
                 self.stockerEstimateList.append(stockerEstimateItem)
-            
             case .failure(let error):
                 print(error)
             }
         })
     }
+    
+    func initRefresh(){
+        let refresh = UIRefreshControl()
+        refresh.tintColor = #colorLiteral(red: 0.001231680741, green: 0.6993102431, blue: 0.9645704627, alpha: 1)
+        refresh.addTarget(self, action: #selector(requestData(refresh:)), for: .valueChanged)
+        if #available(iOS 10.0, *){
+            homeTableView.refreshControl = refresh
+        } else {
+            homeTableView.addSubview(refresh)
+        }
+    }
+    
+    @objc func requestData(refresh: UIRefreshControl){
+        stockerEstimateList = []
+        self.getStockListData()
+        refresh.endRefreshing()
+    }
+    
 }
 
 extension HomeController : UITableViewDataSource {
@@ -102,7 +120,7 @@ extension HomeController : UITableViewDataSource {
                 
                 let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].startIndex]
                 let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].index(before: self.stockPriceArray[indexPath.row].endIndex)]
-                let presentPriceRatio = calculateRatio((presentPrice / comparePrice) - 1)
+                let presentPriceRatio = calculateRatio((presentPrice / listItem.stockPrice) - 1)
                 let estimatePriceRatio = self.stockPriceArray[indexPath.row].max()! / listItem.stockEstimatePrice
                 cell.ratioValues = [presentPriceRatio, estimatePriceRatio]
                 
