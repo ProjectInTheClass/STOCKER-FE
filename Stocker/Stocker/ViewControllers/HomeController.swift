@@ -10,8 +10,6 @@ class HomeController: UIViewController {
     let estivateSectionRows : [Int] = [0,1,2,3,4]
     var selected : [Bool] = [false,true,true,true,true]
     
-    var stockPriceArray : [[Double]] = []
-    
     var stockerEstimateList : [StockerEstimate] = [] {
         didSet{
             self.homeTableView.reloadData()
@@ -47,7 +45,6 @@ class HomeController: UIViewController {
         StockerChartAPI.shared.getStockerChartData(stockCode: stockListItem.stockCode, completion: { result in
             switch result {
             case .success(let data):
-                self.stockPriceArray.append(data.lastPrice)
                 let parsedLastPrice : [ChartDataEntry] =  data.lastPrice.enumerated().map{ (index, price) in
                     ChartDataEntry(x: Double(index), y: price)
                 }
@@ -57,6 +54,7 @@ class HomeController: UIViewController {
                     stockPrice: stockListItem.stockPrice,
                     stockEstimatePrice: stockListItem.stockEstimatePrice,
                     lastTime: data.lastTime,
+                    lastPrice : data.lastPrice,
                     parsedLastPrice: parsedLastPrice
                 )
                 self.stockerEstimateList.append(stockerEstimateItem)
@@ -80,7 +78,9 @@ class HomeController: UIViewController {
     @objc func requestData(refresh: UIRefreshControl){
         stockerEstimateList = []
         self.getStockListData()
-        refresh.endRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+            refresh.endRefreshing()
+        }
     }
     
 }
@@ -116,12 +116,17 @@ extension HomeController : UITableViewDataSource {
                 let listItem : StockerEstimate = self.stockerEstimateList[indexPath.row]
                 var lastTime : String =  String(Int(round(listItem.lastTime)))
                 lastTime.insert(":", at: lastTime.index(lastTime.endIndex, offsetBy: -2))
-                let maximumLastPrice : Double = self.stockPriceArray[indexPath.row].max()!
+                let maximumLastPrice : Double = listItem.lastPrice.max()!
                 
-                let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].startIndex]
-                let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].index(before: self.stockPriceArray[indexPath.row].endIndex)]
+//                let maximumLastPrice : Double = self.stockPriceArray[indexPath.row].max()!
+//                let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].startIndex]
+//                let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].index(before: self.stockPriceArray[indexPath.row].endIndex)]
+//                let comparePrice = listItem.lastPrice[listItem.lastPrice.startIndex]
+                
+                let presentPrice = listItem.lastPrice[listItem.lastPrice.endIndex - 1]
+                
                 let presentPriceRatio = calculateRatio((presentPrice / listItem.stockPrice) - 1)
-                let estimatePriceRatio = self.stockPriceArray[indexPath.row].max()! / listItem.stockEstimatePrice
+                let estimatePriceRatio = maximumLastPrice / listItem.stockEstimatePrice
                 cell.ratioValues = [presentPriceRatio, estimatePriceRatio]
                 
                 cell.stockCodeLabel.text = listItem.stockCode
