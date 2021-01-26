@@ -37,5 +37,6 @@ struct StockerEstimate {
     let stockPrice : Double
     let stockEstimatePrice : Double
     var lastTime : Double
+    var lastPrice : [Double]
     var parsedLastPrice : [ChartDataEntry]
 }

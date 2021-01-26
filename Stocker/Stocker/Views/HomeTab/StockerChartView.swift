@@ -8,8 +8,12 @@
 import UIKit
 import Charts
 import TinyConstraints
+import CoreGraphics
 
 class StockerChartView: UIView, ChartViewDelegate {
+    
+    var charts = LineChartView()
+    let marker = ChartMarker()
     
     lazy var lineChartView : LineChartView = {
         let chartView = LineChartView()
@@ -30,6 +34,8 @@ class StockerChartView: UIView, ChartViewDelegate {
         chartView.xAxis.axisLineColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
         chartView.animate(xAxisDuration: 2.5)
+        marker.chartView = chartView
+        chartView.marker = marker
         return chartView
     }()
     
@@ -61,10 +67,10 @@ class StockerChartView: UIView, ChartViewDelegate {
         set1.fill = Fill(color: #colorLiteral(red: 0.3574229479, green: 0.4851229191, blue: 0.9726678729, alpha: 1))
         set1.fillAlpha = 0.5
         set1.drawFilledEnabled = true
-        set1.drawHorizontalHighlightIndicatorEnabled = true
-        set1.highlightColor = #colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 1)
+        set1.highlightColor = #colorLiteral(red: 0.001231680741, green: 0.6993102431, blue: 0.9645704627, alpha: 1)
         set1.highlightLineWidth = 2
         set1.setDrawHighlightIndicators(true)
+        set1.drawHorizontalHighlightIndicatorEnabled = false
         set1.circleRadius = 5.0
         
         let data = LineChartData(dataSet: set1)
