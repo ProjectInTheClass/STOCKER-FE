@@ -7,8 +7,12 @@ class YieldTVC: UITableViewCell {
     
     @IBOutlet weak var a: UIView!
     @IBOutlet weak var b: UIView!
+    @IBOutlet weak var c: UIView!
+    
+    
     @IBOutlet weak var cumRevenueLabel: UILabel!
     @IBOutlet weak var lastRevenueLabel: UILabel!
+    
     
     var revenue : [Double] = []
     
@@ -47,12 +51,22 @@ class YieldTVC: UITableViewCell {
         a.layer.shadowOffset = CGSize(width: 1, height: 1)
         a.layer.shadowRadius = 10
         a.layer.masksToBounds = false
-    
+        
         b.layer.cornerRadius = 10
         b.layer.shadowOpacity = 0.1
         b.layer.shadowOffset = CGSize(width: 1, height: 1)
         b.layer.shadowRadius = 10
         b.layer.masksToBounds = false
+        
+        c.layer.cornerRadius = 10
+        c.layer.shadowOpacity = 0.1
+        c.layer.shadowOffset = CGSize(width: 1, height: 1)
+        c.layer.shadowRadius = 10
+        c.layer.masksToBounds = false
+    
+        
+        
+        
     }
     
 }
