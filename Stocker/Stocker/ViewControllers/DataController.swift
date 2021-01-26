@@ -134,10 +134,10 @@ func setTotalRevenueLabel(totalRevenue:Double, label:PaddingLabel) {
     label.clipsToBounds = true
     if totalRevenue >= 1 {
         label.backgroundColor = #colorLiteral(red: 0.9684663415, green: 0.3563124835, blue: 0.5123978257, alpha: 1)
-        label.text = "+\(round((totalRevenue - 1) * 10000)/100)%"
+        label.text = "+\(round((totalRevenue - 1) * 1000)/10)%"
     } else {
         label.backgroundColor = #colorLiteral(red: 0.2899923027, green: 0.9102768898, blue: 0.6825894713, alpha: 1)
-        label.text = "\(Int(round((totalRevenue - 1) * 100)))%"
+        label.text = "\(round((totalRevenue - 1) * 1000)/10)%"
     }
 }
 
