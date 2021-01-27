@@ -12,7 +12,9 @@
   <a href="https://apps.apple.com/us/app/똑똑한-ai-펀드매니저-stocker/id1550061852">
     <img alt="Qries" width="150pixel" src="https://user-images.githubusercontent.com/46745325/105926994-66b5b280-6086-11eb-8c71-33e6d43eb8c2.png"></img>
   </a>
+  
   <img src="https://user-images.githubusercontent.com/46745325/103398279-5beb2900-4b7f-11eb-82bf-b28d2ad8532c.png"></img>
+  <img src="https://user-images.githubusercontent.com/46745325/105927446-5a7e2500-6087-11eb-9b8c-189fdb83b410.png"></img>
 </p>
 
 
