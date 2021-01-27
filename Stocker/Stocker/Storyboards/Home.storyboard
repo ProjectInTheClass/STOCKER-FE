@@ -638,7 +638,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZpT-u5-UJK">
                                                                 <rect key="frame" x="0.0" y="0.0" width="244" height="24.5"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zN2-Y0-myo">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zN2-Y0-myo">
                                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="24.5"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign" translatesAutoresizingMaskIntoConstraints="NO" id="SYh-34-fQ4">
@@ -648,8 +648,8 @@
                                                                                     <constraint firstAttribute="width" constant="22" id="lZE-qC-C6G"/>
                                                                                 </constraints>
                                                                             </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재가 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6g-Qu-I2o">
-                                                                                <rect key="frame" x="30" y="0.0" width="57.5" height="24.5"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재가 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6g-Qu-I2o">
+                                                                                <rect key="frame" x="25" y="0.0" width="57.5" height="24.5"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="57.670000000000002" id="NnU-2M-uYx"/>
                                                                                 </constraints>
@@ -658,7 +658,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,700원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrt-bu-jay">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="63.5" height="24.5"/>
+                                                                                <rect key="frame" x="85.5" y="0.0" width="73.5" height="24.5"/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                                 <nil key="textColor"/>
@@ -694,7 +694,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XrS-Oy-cLg">
                                                                 <rect key="frame" x="0.0" y="31.5" width="244" height="24.5"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q2B-Do-71l">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Q2B-Do-71l">
                                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="24.5"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="zzb-cF-gh2">
@@ -705,7 +705,7 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예측가 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-BU-rfr">
-                                                                                <rect key="frame" x="32" y="0.0" width="53.5" height="24.5"/>
+                                                                                <rect key="frame" x="25" y="0.0" width="53.5" height="24.5"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="53.329999999999998" id="ax6-yv-DRj"/>
                                                                                 </constraints>
@@ -714,7 +714,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,800원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtL-VB-OOX">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="63.5" height="24.5"/>
+                                                                                <rect key="frame" x="81.5" y="0.0" width="77.5" height="24.5"/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                                 <nil key="textColor"/>

@@ -8,7 +8,7 @@ class HomeController: UIViewController, UITableViewDelegate {
     let identifiers : [String] = ["AppLogoTVC", "YieldTVC","PredictionTitleTVC", "PredictionTVC"]
     let sections : [String] = ["Others1","Others2","Others3" ,"Estimate"]
     let estivateSectionRows : [Int] = [0,1,2,3,4]
-    var selected : [Bool] = [false,true,true,true,true]
+    var selected : [Bool] = [true,true,true,true,true]
     
     var stockerEstimateList : [StockerEstimate] = [] {
         didSet{
