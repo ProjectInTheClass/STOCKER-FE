@@ -24,17 +24,17 @@
   <a href="https://github.com/comojin1994"><img width="100pixel" src="https://user-images.githubusercontent.com/46745325/105145318-ea7d1580-5b41-11eb-9142-e3e08a009145.png"/></a>
 </p>
 
-[contributors-shield]: https://img.shields.io/github/contributors/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
+[contributors-shield]: https://img.shields.io/github/contributors/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=github
 [contributors-url]: https://github.com/ProjectInTheClass/STOCKER-FE/graphs/contributors
-[commit-shield]: https://img.shields.io/github/commit-activity/y/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
+[commit-shield]: https://img.shields.io/github/commit-activity/y/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=github
 [commit-url]: https://github.com/ProjectInTheClass/STOCKER-FE/commits/develop
-[forks-shield]: https://img.shields.io/github/forks/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
+[forks-shield]: https://img.shields.io/github/forks/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=github
 [forks-url]: https://github.com/ProjectInTheClass/STOCKER-FE/network/members
-[stars-shield]: https://img.shields.io/github/stars/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
+[stars-shield]: https://img.shields.io/github/stars/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=github&label=★stars
 [stars-url]: https://github.com/ProjectInTheClass/STOCKER-FE/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
+[issues-shield]: https://img.shields.io/github/issues/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=github
 [issues-url]: https://github.com/ProjectInTheClass/STOCKER-FE/issues
-[license-shield]: https://img.shields.io/github/license/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
+[license-shield]: https://img.shields.io/github/license/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=apache
 [license-url]: https://github.com/ProjectInTheClass/STOCKER-FE/blob/master/LICENSE.txt
-[appstore-shield]: https://img.shields.io/itunes/v/1550061852?label=App%20Store&flat&logo=appveyor
+[appstore-shield]: https://img.shields.io/itunes/v/1550061852?label=App%20Store&flat&logo=app-store
 [appstore-url]: https://apps.apple.com/us/app/똑똑한-ai-펀드매니저-stocker/id1550061852
