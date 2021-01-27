@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b022b7ffcba684c673d769d07c2321c1",
+    "revision": "95d510951dc7c79c85761094af9c04b4",
     "url": "/STOCKER-FE/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/STOCKER-FE/static/css/2.4707e12a.chunk.css"
   },
   {
-    "revision": "313028d9d78edb88fed1",
+    "revision": "8b4588e61218bae5ab8e",
     "url": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/STOCKER-FE/static/js/2.eb3fbbba.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "313028d9d78edb88fed1",
-    "url": "/STOCKER-FE/static/js/main.88e1c8f1.chunk.js"
+    "revision": "8b4588e61218bae5ab8e",
+    "url": "/STOCKER-FE/static/js/main.debd6aa7.chunk.js"
   },
   {
     "revision": "2567f3acdec22c3c0cd1",
