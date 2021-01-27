@@ -35,6 +35,7 @@ Pods/
 Icon
 
 
+
 # Thumbnails
 ._*
 
@@ -138,11 +139,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-### SwiftPackageManager ###
-Packages
-xcuserdata
-*.xcodeproj
-
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -203,4 +199,15 @@ $RECYCLE.BIN/
 # and uncomment the following lines
 # .pnp.*
 
+### Carthage ###
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,xcode,cocoapods,yarn,swift,swiftpackagemanager
+
+
+docs/node_modules

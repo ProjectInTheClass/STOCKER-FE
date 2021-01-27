@@ -1,0 +1,33 @@
+const GlobalStyle = createGlobalStyle`
+  body{
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap");
+    font-family: "Fira Mono";
+    margin : 0;
+  } 
+  a{
+    text-decoration : none;
+  }
+  ul{
+    list-style : none;
+    padding-left : 0;
+  }
+`;
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ Global Style
+
+Monitor
+
+Large Tablet    : 991px ~ 
+
+Small Tablet    : 768px ~ 991px
+ 
+Mobile Phone    : 0px ~ 767px
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+

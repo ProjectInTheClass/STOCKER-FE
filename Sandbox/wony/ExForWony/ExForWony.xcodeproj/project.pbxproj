@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		171FA50941E4155D8C9CDECB /* Pods_ExForWony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFC07D685E8683F2FA30C19 /* Pods_ExForWony.framework */; };
+		EF10128A25A5CDFE00C93C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10128925A5CDFE00C93C6A /* AppDelegate.swift */; };
+		EF10128C25A5CDFE00C93C6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10128B25A5CDFE00C93C6A /* SceneDelegate.swift */; };
+		EF10128E25A5CDFE00C93C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10128D25A5CDFE00C93C6A /* ViewController.swift */; };
+		EF10129125A5CDFE00C93C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF10128F25A5CDFE00C93C6A /* Main.storyboard */; };
+		EF10129325A5CDFF00C93C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF10129225A5CDFF00C93C6A /* Assets.xcassets */; };
+		EF10129625A5CDFF00C93C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF10129425A5CDFF00C93C6A /* LaunchScreen.storyboard */; };
+		EF1012A125A5CFAD00C93C6A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1012A025A5CFAD00C93C6A /* Home.storyboard */; };
+		EF1012A825A5D1B700C93C6A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1012A725A5D1B700C93C6A /* HomeController.swift */; };
+		EF1012AD25A5D42700C93C6A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1012AC25A5D42700C93C6A /* DataController.swift */; };
+		EF1012B025A5D43300C93C6A /* Data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1012AF25A5D43300C93C6A /* Data.storyboard */; };
+		EF45601C25A841820008B505 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45601B25A841820008B505 /* Test.swift */; };
+		EF6CDEA025AF197E009F546D /* StarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6CDE9F25AF197E009F546D /* StarTableViewCell.swift */; };
+		EF71E0CE25AED16600357EFE /* StockChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0CD25AED16600357EFE /* StockChartData.swift */; };
+		EF71E0D225AED1A500357EFE /* EstimateStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0D125AED1A500357EFE /* EstimateStock.swift */; };
+		EF71E0D525AED1C400357EFE /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0D425AED1C400357EFE /* Stock.swift */; };
+		EF71E0D925AED20A00357EFE /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0D825AED20A00357EFE /* Chart.swift */; };
+		EF71E0DD25AEE2B200357EFE /* ChartTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71E0DC25AEE2B200357EFE /* ChartTitleTableViewCell.swift */; };
+		EFA9618825A6AE0F00734355 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9618725A6AE0F00734355 /* LineChart.swift */; };
+		EFA9618E25A6AE8100734355 /* LineChartDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA9618D25A6AE8100734355 /* LineChartDataModel.swift */; };
+		EFA961C425A71F7400734355 /* AppLogoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA961C325A71F7400734355 /* AppLogoTVC.swift */; };
+		EFA961C725A71F9800734355 /* YieldTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA961C625A71F9800734355 /* YieldTVC.swift */; };
+		EFA961CB25A72D7C00734355 /* YieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA961CA25A72D7C00734355 /* YieldView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1EFC07D685E8683F2FA30C19 /* Pods_ExForWony.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExForWony.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39F9BB1C986C900D3BE71B6A /* Pods-ExForWony.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExForWony.debug.xcconfig"; path = "Target Support Files/Pods-ExForWony/Pods-ExForWony.debug.xcconfig"; sourceTree = "<group>"; };
+		D42B48539D6227602F35E343 /* Pods-ExForWony.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExForWony.release.xcconfig"; path = "Target Support Files/Pods-ExForWony/Pods-ExForWony.release.xcconfig"; sourceTree = "<group>"; };
+		EF10128625A5CDFE00C93C6A /* ExForWony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExForWony.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF10128925A5CDFE00C93C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF10128B25A5CDFE00C93C6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF10128D25A5CDFE00C93C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF10129025A5CDFE00C93C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF10129225A5CDFF00C93C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF10129525A5CDFF00C93C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF10129725A5CDFF00C93C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1012A025A5CFAD00C93C6A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EF1012A725A5D1B700C93C6A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		EF1012AC25A5D42700C93C6A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		EF1012AF25A5D43300C93C6A /* Data.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Data.storyboard; sourceTree = "<group>"; };
+		EF45601B25A841820008B505 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		EF6CDE9F25AF197E009F546D /* StarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTableViewCell.swift; sourceTree = "<group>"; };
+		EF71E0CD25AED16600357EFE /* StockChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockChartData.swift; sourceTree = "<group>"; };
+		EF71E0D125AED1A500357EFE /* EstimateStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateStock.swift; sourceTree = "<group>"; };
+		EF71E0D425AED1C400357EFE /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		EF71E0D825AED20A00357EFE /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		EF71E0DC25AEE2B200357EFE /* ChartTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTitleTableViewCell.swift; sourceTree = "<group>"; };
+		EFA9618725A6AE0F00734355 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		EFA9618D25A6AE8100734355 /* LineChartDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDataModel.swift; sourceTree = "<group>"; };
+		EFA961C325A71F7400734355 /* AppLogoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoTVC.swift; sourceTree = "<group>"; };
+		EFA961C625A71F9800734355 /* YieldTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YieldTVC.swift; sourceTree = "<group>"; };
+		EFA961CA25A72D7C00734355 /* YieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YieldView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF10128325A5CDFE00C93C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				171FA50941E4155D8C9CDECB /* Pods_ExForWony.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C20CFD3661AF6FD101E5DF30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EFC07D685E8683F2FA30C19 /* Pods_ExForWony.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE06FECBF139B75D48346DD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39F9BB1C986C900D3BE71B6A /* Pods-ExForWony.debug.xcconfig */,
+				D42B48539D6227602F35E343 /* Pods-ExForWony.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF10127D25A5CDFE00C93C6A = {
+			isa = PBXGroup;
+			children = (
+				EF10128825A5CDFE00C93C6A /* ExForWony */,
+				EF10128725A5CDFE00C93C6A /* Products */,
+				EE06FECBF139B75D48346DD4 /* Pods */,
+				C20CFD3661AF6FD101E5DF30 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF10128725A5CDFE00C93C6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF10128625A5CDFE00C93C6A /* ExForWony.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF10128825A5CDFE00C93C6A /* ExForWony */ = {
+			isa = PBXGroup;
+			children = (
+				EF71E0D725AED1F800357EFE /* API */,
+				EFA9618B25A6AE3900734355 /* Models */,
+				EFA9618525A6ADE600734355 /* Views */,
+				EF1012A625A5D19E00C93C6A /* ViewController */,
+				EF10129E25A5CEE400C93C6A /* Storyboard */,
+				EF10128925A5CDFE00C93C6A /* AppDelegate.swift */,
+				EF10128B25A5CDFE00C93C6A /* SceneDelegate.swift */,
+				EF10128D25A5CDFE00C93C6A /* ViewController.swift */,
+				EF10128F25A5CDFE00C93C6A /* Main.storyboard */,
+				EF10129225A5CDFF00C93C6A /* Assets.xcassets */,
+				EF10129425A5CDFF00C93C6A /* LaunchScreen.storyboard */,
+				EF10129725A5CDFF00C93C6A /* Info.plist */,
+			);
+			path = ExForWony;
+			sourceTree = "<group>";
+		};
+		EF10129E25A5CEE400C93C6A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF1012A025A5CFAD00C93C6A /* Home.storyboard */,
+				EF1012AF25A5D43300C93C6A /* Data.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EF1012A625A5D19E00C93C6A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFA961B025A6F65D00734355 /* Home */,
+				EF1012A725A5D1B700C93C6A /* HomeController.swift */,
+				EF1012AC25A5D42700C93C6A /* DataController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EF71E0D725AED1F800357EFE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EF71E0D825AED20A00357EFE /* Chart.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EFA9618525A6ADE600734355 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFA9618625A6ADF300734355 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFA9618625A6ADF300734355 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EFA9618725A6AE0F00734355 /* LineChart.swift */,
+				EFA961CA25A72D7C00734355 /* YieldView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EFA9618B25A6AE3900734355 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFA9618C25A6AE7100734355 /* Home */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFA9618C25A6AE7100734355 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EFA9618D25A6AE8100734355 /* LineChartDataModel.swift */,
+				EF71E0CD25AED16600357EFE /* StockChartData.swift */,
+				EF71E0D125AED1A500357EFE /* EstimateStock.swift */,
+				EF71E0D425AED1C400357EFE /* Stock.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EFA961B025A6F65D00734355 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EFA961B125A6F66800734355 /* TableViewCells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EFA961B125A6F66800734355 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFA961C325A71F7400734355 /* AppLogoTVC.swift */,
+				EFA961C625A71F9800734355 /* YieldTVC.swift */,
+				EF45601B25A841820008B505 /* Test.swift */,
+				EF71E0DC25AEE2B200357EFE /* ChartTitleTableViewCell.swift */,
+				EF6CDE9F25AF197E009F546D /* StarTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF10128525A5CDFE00C93C6A /* ExForWony */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF10129A25A5CDFF00C93C6A /* Build configuration list for PBXNativeTarget "ExForWony" */;
+			buildPhases = (
+				60F1EA2804FB70175428A23C /* [CP] Check Pods Manifest.lock */,
+				EF10128225A5CDFE00C93C6A /* Sources */,
+				EF10128325A5CDFE00C93C6A /* Frameworks */,
+				EF10128425A5CDFE00C93C6A /* Resources */,
+				3ECA45E237537EFC203E64A0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExForWony;
+			productName = ExForWony;
+			productReference = EF10128625A5CDFE00C93C6A /* ExForWony.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF10127E25A5CDFE00C93C6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					EF10128525A5CDFE00C93C6A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = EF10128125A5CDFE00C93C6A /* Build configuration list for PBXProject "ExForWony" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF10127D25A5CDFE00C93C6A;
+			productRefGroup = EF10128725A5CDFE00C93C6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF10128525A5CDFE00C93C6A /* ExForWony */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF10128425A5CDFE00C93C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF10129625A5CDFF00C93C6A /* LaunchScreen.storyboard in Resources */,
+				EF10129325A5CDFF00C93C6A /* Assets.xcassets in Resources */,
+				EF10129125A5CDFE00C93C6A /* Main.storyboard in Resources */,
+				EF1012B025A5D43300C93C6A /* Data.storyboard in Resources */,
+				EF1012A125A5CFAD00C93C6A /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3ECA45E237537EFC203E64A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExForWony/Pods-ExForWony-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExForWony/Pods-ExForWony-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExForWony/Pods-ExForWony-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F1EA2804FB70175428A23C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExForWony-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF10128225A5CDFE00C93C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA961C425A71F7400734355 /* AppLogoTVC.swift in Sources */,
+				EF6CDEA025AF197E009F546D /* StarTableViewCell.swift in Sources */,
+				EF1012AD25A5D42700C93C6A /* DataController.swift in Sources */,
+				EF1012A825A5D1B700C93C6A /* HomeController.swift in Sources */,
+				EFA9618825A6AE0F00734355 /* LineChart.swift in Sources */,
+				EF71E0CE25AED16600357EFE /* StockChartData.swift in Sources */,
+				EF71E0D925AED20A00357EFE /* Chart.swift in Sources */,
+				EFA961C725A71F9800734355 /* YieldTVC.swift in Sources */,
+				EF45601C25A841820008B505 /* Test.swift in Sources */,
+				EF10128E25A5CDFE00C93C6A /* ViewController.swift in Sources */,
+				EFA961CB25A72D7C00734355 /* YieldView.swift in Sources */,
+				EFA9618E25A6AE8100734355 /* LineChartDataModel.swift in Sources */,
+				EF71E0D525AED1C400357EFE /* Stock.swift in Sources */,
+				EF71E0D225AED1A500357EFE /* EstimateStock.swift in Sources */,
+				EF10128A25A5CDFE00C93C6A /* AppDelegate.swift in Sources */,
+				EF10128C25A5CDFE00C93C6A /* SceneDelegate.swift in Sources */,
+				EF71E0DD25AEE2B200357EFE /* ChartTitleTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF10128F25A5CDFE00C93C6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF10129025A5CDFE00C93C6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF10129425A5CDFF00C93C6A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF10129525A5CDFF00C93C6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF10129825A5CDFF00C93C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF10129925A5CDFF00C93C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF10129B25A5CDFF00C93C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39F9BB1C986C900D3BE71B6A /* Pods-ExForWony.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GRDZZD84B;
+				INFOPLIST_FILE = ExForWony/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.himelo.ExForWony;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF10129C25A5CDFF00C93C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D42B48539D6227602F35E343 /* Pods-ExForWony.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GRDZZD84B;
+				INFOPLIST_FILE = ExForWony/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.himelo.ExForWony;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF10128125A5CDFE00C93C6A /* Build configuration list for PBXProject "ExForWony" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF10129825A5CDFF00C93C6A /* Debug */,
+				EF10129925A5CDFF00C93C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF10129A25A5CDFF00C93C6A /* Build configuration list for PBXNativeTarget "ExForWony" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF10129B25A5CDFF00C93C6A /* Debug */,
+				EF10129C25A5CDFF00C93C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF10127E25A5CDFE00C93C6A /* Project object */;
+}
