@@ -65,9 +65,9 @@ const StockerData = () => {
   return (
     <Container>
       <BackgroundStyles />
-      <Contents data-aos="fade-left">
+      <Contents data-aos="fade-right">
         <SplashDesc>
-          <h2>STOCKER Data</h2>
+          <h2>STOCKER HISTORY</h2>
           <p>- 지난 주차의 히스토리 기록</p>
           <p>- STOCKER AI 정확도를 한눈에 확인</p>
         </SplashDesc>

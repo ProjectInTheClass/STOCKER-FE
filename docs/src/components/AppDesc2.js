@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import GuideImage1 from "../img/guide1.png";
-import GuideImage2 from "../img/guide2.png";
+import GuideImage1 from "../img/guide3.png";
+import GuideImage2 from "../img/guide4.png";
 
 const Container = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: center;
   background: #fff;
   padding-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 `;
 
 const Contents = styled.div`
@@ -83,7 +83,7 @@ const DescImageContainer = styled.div`
   }
 `;
 
-const AppDesc = () => {
+const AppDesc2 = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -96,9 +96,7 @@ const AppDesc = () => {
             <DescImageContainer>
               <img src={GuideImage1} />
             </DescImageContainer>
-            <h3>
-              STOCKER 앱 출시 후의 누적 수익률과 지난 주의 수익률을 보여줍니다
-            </h3>
+            <h3>지난 4주 간의 STOCKER 히스토리를 보여드립니다</h3>
           </DescComponent>
         </DescContainer>
         <DescContainer>
@@ -106,7 +104,7 @@ const AppDesc = () => {
             <DescImageContainer>
               <img src={GuideImage2} />
             </DescImageContainer>
-            <h3>추천 종목의 실시간 가격과 차트를 통해 가격 변동을 한눈에!</h3>
+            <h3>각 주차의 수익률을 보여드립니다</h3>
           </DescComponent>
         </DescContainer>
       </Contents>
@@ -114,4 +112,4 @@ const AppDesc = () => {
   );
 };
 
-export default AppDesc;
+export default AppDesc2;

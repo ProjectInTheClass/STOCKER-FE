@@ -26,9 +26,11 @@ const MainLogoImg = styled.img`
   height: 18rem;
   border-width: 1px;
   margin-top: 300px;
+  margin-left: 100px;
   @media screen and (max-width: 767px) {
     width: 100%;
     height: 17rem;
+    margin-left: 0px;
     /* height: 10rem; */
   }
 
@@ -45,18 +47,8 @@ const MainBackgroundImg = styled.div`
   /* Background Fix code */
   background: url(${(props) => props.img}) no-repeat center/cover;
   background-attachment: fixed;
+  z-index: 2828;
 `;
-
-// const OpacityBlock = styled.div`
-//   width: 100%;
-//   height: ${backgroundHeight};
-//   background-color: rgba(255, 255, 255, 0.2);
-//   z-index: 5;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// `;
 
 const IndexContextContainer = styled.div`
   display: flex;
@@ -65,10 +57,28 @@ const IndexContextContainer = styled.div`
   /* align-items: center; */
   width: auto;
   height: 480px;
+
+  a {
+    z-index: 1818;
+    margin-left: 36rem;
+  }
+
   @media screen and (min-width: 768px) and(max-width: 991px) {
     align-items: center;
+    margin-left: 0px;
+
+    a {
+      width: 100%;
+      margin-left: 0rem;
+      align-self: center;
+    }
   }
+
   @media screen and (max-width: 767px) {
+    a {
+      width: 100%;
+      align-self: center;
+    }
   }
 `;
 
@@ -87,6 +97,7 @@ const MoreButton = styled.div`
   background-color: white;
   border: 1px solid #dee2e6;
   cursor: pointer;
+
   &:hover {
     background-color: #f8f9fa;
   }
@@ -118,6 +129,13 @@ const IntroContents = () => {
           <OpacityBlock height={"100vh"} />
           <IndexContextContainer>
             <MainLogoImg src={logoImg} />
+            <a href="https://apps.apple.com/us/app/똑똑한-ai-펀드매니저-stocker/id1550061852">
+              <img
+                alt="Qries"
+                width="150pixel"
+                src="https://user-images.githubusercontent.com/46745325/105926994-66b5b280-6086-11eb-8c71-33e6d43eb8c2.png"
+              ></img>
+            </a>
           </IndexContextContainer>
         </MainBackgroundImg>
         <MoreButton>

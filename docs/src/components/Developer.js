@@ -102,9 +102,24 @@ const Developer = () => {
           <p>Chart Design</p>
           <p>iOS dev</p>
           <LinkGroup>
-            <GoMarkGithub fontSize={38} />
-            <GrFacebook fontSize={32} />
-            <AiFillLinkedin fontSize={40} />
+            <a
+              href="https://github.com/WonyJeong"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <GoMarkGithub fontSize={35} />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100008404605583"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <GrFacebook fontSize={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/wonyoung-jeong-42b666202/"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <AiFillLinkedin fontSize={37} />
+            </a>
           </LinkGroup>
         </DeveloperDesc>
         <DeveloperDesc>
@@ -114,9 +129,24 @@ const Developer = () => {
           <p>Server</p>
           <p>Release</p>
           <LinkGroup>
-            <GoMarkGithub fontSize={38} />
-            <GrFacebook fontSize={32} />
-            <AiFillLinkedin fontSize={40} />
+            <a
+              href="https://github.com/comojin1994"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <GoMarkGithub fontSize={35} />
+            </a>
+            <a
+              href="https://www.facebook.com/comojin1994/"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <GrFacebook fontSize={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sungjin-kim-0718"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <AiFillLinkedin fontSize={37} />
+            </a>
           </LinkGroup>
         </DeveloperDesc>
         <DeveloperDesc>
@@ -126,9 +156,24 @@ const Developer = () => {
           <p>UI / UX</p>
           <p>iOS dev</p>
           <LinkGroup>
-            <GoMarkGithub fontSize={38} />
-            <GrFacebook fontSize={32} />
-            <AiFillLinkedin fontSize={40} />
+            <a
+              href="https://github.com/koalakid1"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <GoMarkGithub fontSize={35} />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100004463082624"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <GrFacebook fontSize={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/taemin-lee-%EC%9D%B4%ED%83%9C%EB%AF%BC-9b8393202/"
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              <AiFillLinkedin fontSize={37} />
+            </a>
           </LinkGroup>
         </DeveloperDesc>
       </Contents>

@@ -9,6 +9,7 @@ import Developer from "./Developer";
 import Fotter from "./Fotter";
 import ADS from "./ADS";
 import AppDesc from "./AppDesc";
+import AppDesc2 from "./AppDesc2";
 
 const MainContets = () => {
   return (
@@ -17,6 +18,7 @@ const MainContets = () => {
       <Second />
       <ADS />
       <AppDesc />
+      <AppDesc2 />
       <AboutContents />
       <StockerHome />
       <StockerHomeContents />

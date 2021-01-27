@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import logoImg from "../img/stockerLogo.png";
+import logoImg from "../img/headerLogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ScrollTo } from "react-scroll-to";
 
@@ -37,7 +37,7 @@ const BrandContainer = styled.div`
   padding-top: 1rem;
   padding-bottom: 1rem;
   img {
-    width: 4rem;
+    width: 8rem;
   }
   a {
     font-size: 1.125rem;
@@ -152,7 +152,6 @@ const Header = () => {
         <PageHeader>
           <BrandContainer>
             <img src={logoImg} />
-            <a href="/">STOCKER</a>
           </BrandContainer>
         </PageHeader>
       </HeaderLayoutContainer>

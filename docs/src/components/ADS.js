@@ -48,7 +48,7 @@ const LeftComponent = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    width: 60%;
+    width: 100%;
   }
 `;
 
@@ -57,6 +57,7 @@ const RightComponent = styled.div`
   justify-content: center;
   width: 600px;
   height: 300px;
+
   @media screen and (min-width: 768px) and (max-width: 991px) {
     width: 300px;
     img {
@@ -65,7 +66,7 @@ const RightComponent = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    width: 40%;
+    width: 0%;
     img {
       display: none;
     }
