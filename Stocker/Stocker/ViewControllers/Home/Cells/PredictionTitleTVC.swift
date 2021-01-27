@@ -7,8 +7,16 @@
 
 import UIKit
 
-class PredictionTitleTVC: UITableViewCell {
+protocol PredictionTitleTVCDelegate {
+    func openGuideAlert()
+}
 
+class PredictionTitleTVC: UITableViewCell {
+    @IBOutlet weak var guideButton: UIButton!
+    
+    var index: Int = 0
+    var delegate : PredictionTitleTVCDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +28,7 @@ class PredictionTitleTVC: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func openGuideAlert(_ sender: UIButton) {
+        self.delegate?.openGuideAlert()
+    }
 }

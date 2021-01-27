@@ -1,7 +1,7 @@
 import UIKit
 import Charts
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, UITableViewDelegate {
         
     @IBOutlet weak var homeTableView: UITableView!
     
@@ -18,8 +18,9 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         homeTableView.dataSource = self
+        homeTableView.delegate = self
         homeTableView.backgroundColor = UIColor.systemGray6
         self.homeTableView.estimatedRowHeight = 200
         self.homeTableView.rowHeight = UITableView.automaticDimension
@@ -105,7 +106,9 @@ extension HomeController : UITableViewDataSource {
         } else if indexPath.section == 1 {
             return self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.section], for: indexPath) as! YieldTVC
         } else if indexPath.section == 2 {
-            return  self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.section], for: indexPath) as! PredictionTitleTVC
+            let cell =   self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.section], for: indexPath) as! PredictionTitleTVC
+            cell.delegate = self
+            return cell
         } else if indexPath.section == 3 {
             let cell = self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.section], for: indexPath) as! PredictionTVC
 
@@ -117,12 +120,7 @@ extension HomeController : UITableViewDataSource {
                 var lastTime : String =  String(Int(round(listItem.lastTime)))
                 lastTime.insert(":", at: lastTime.index(lastTime.endIndex, offsetBy: -2))
                 let maximumLastPrice : Double = listItem.lastPrice.max()!
-                
-//                let maximumLastPrice : Double = self.stockPriceArray[indexPath.row].max()!
-//                let comparePrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].startIndex]
-//                let presentPrice = self.stockPriceArray[indexPath.row][stockPriceArray[indexPath.row].index(before: self.stockPriceArray[indexPath.row].endIndex)]
-//                let comparePrice = listItem.lastPrice[listItem.lastPrice.startIndex]
-                
+                                
                 let presentPrice = listItem.lastPrice[listItem.lastPrice.endIndex - 1]
                 
                 let presentPriceRatio = calculateRatio((presentPrice / listItem.stockPrice) - 1)
@@ -167,9 +165,15 @@ extension HomeController : UITableViewDataSource {
     
 }
 
-extension HomeController : ComponentProductCellDelegate{
+extension HomeController : ComponentProductCellDelegate, PredictionTitleTVCDelegate{
     func touchUpInside(index: Int) {
         self.selected[index] = !self.selected[index]
         self.homeTableView.reloadRows(at: [IndexPath.init(row: index, section: 3)], with: .fade)
+    }
+    
+    func openGuideAlert() {
+        let alert = self.storyboard?.instantiateViewController(identifier: "GuideAlertViewController") as! GuideAlertViewController
+        alert.modalPresentationStyle = .overCurrentContext
+        present(alert, animated: true, completion: nil)
     }
 }

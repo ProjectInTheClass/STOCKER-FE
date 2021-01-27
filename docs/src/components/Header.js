@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import logoImg from "../img/StockerLogo.png";
+import logoImg from "../img/stockerLogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ScrollTo } from "react-scroll-to";
 

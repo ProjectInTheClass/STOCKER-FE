@@ -40,6 +40,7 @@
 		EF9E7B5925B7C5410089701D /* RevenueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E7B5825B7C5410089701D /* RevenueAPI.swift */; };
 		EFA353D825B91B9100F5F2BE /* StockerChartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA353D725B91B9100F5F2BE /* StockerChartAPI.swift */; };
 		EFA353DE25B9298000F5F2BE /* StockListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA353DD25B9298000F5F2BE /* StockListAPI.swift */; };
+		EFAA2A7F25C0F6E7003ADB47 /* GuideAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA2A7E25C0F6E7003ADB47 /* GuideAlertViewController.swift */; };
 		EFBE758E25B56EDA00783C27 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE758D25B56EDA00783C27 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		EF9E7B5825B7C5410089701D /* RevenueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueAPI.swift; sourceTree = "<group>"; };
 		EFA353D725B91B9100F5F2BE /* StockerChartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockerChartAPI.swift; sourceTree = "<group>"; };
 		EFA353DD25B9298000F5F2BE /* StockListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListAPI.swift; sourceTree = "<group>"; };
+		EFAA2A7E25C0F6E7003ADB47 /* GuideAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideAlertViewController.swift; sourceTree = "<group>"; };
 		EFBE758D25B56EDA00783C27 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +251,7 @@
 		EF7BF4BD25B12F960068252D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EFAA2A7D25C0F6BC003ADB47 /* CustomComponents */,
 				EF3B301C25BEB35500192822 /* Setting */,
 				EF7BF4BE25B130080068252D /* Cells */,
 			);
@@ -282,6 +285,14 @@
 				EFA353DD25B9298000F5F2BE /* StockListAPI.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EFAA2A7D25C0F6BC003ADB47 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EFAA2A7E25C0F6E7003ADB47 /* GuideAlertViewController.swift */,
+			);
+			path = CustomComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +425,7 @@
 				EF6FC077259DB517001F6889 /* AppDelegate.swift in Sources */,
 				40AA66F525AEEC1D002F69DF /* DataAPI.swift in Sources */,
 				EFBE758E25B56EDA00783C27 /* PaddingLabel.swift in Sources */,
+				EFAA2A7F25C0F6E7003ADB47 /* GuideAlertViewController.swift in Sources */,
 				EF30B28825B13EE100D38E30 /* AppLogoTVC.swift in Sources */,
 				BD627DCF25A4488100DCB0B4 /* API.swift in Sources */,
 				EF30B29725B1508200D38E30 /* LastRevenueView.swift in Sources */,
