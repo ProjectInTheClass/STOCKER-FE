@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a88907e1e69ebe1c8bb7bf26473bdc9",
+    "revision": "9ced056a2642106b73c2a9875978a354",
     "url": "/STOCKER-FE/index.html"
   },
   {
-    "revision": "92dd023db011836ce60e",
+    "revision": "2ec5601a6e70ee9a971a",
     "url": "/STOCKER-FE/static/css/2.4707e12a.chunk.css"
   },
   {
-    "revision": "df5f42d49de14dfd7ebe",
+    "revision": "671b9d1814f065e1d689",
     "url": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "92dd023db011836ce60e",
-    "url": "/STOCKER-FE/static/js/2.d8a2fc0a.chunk.js"
+    "revision": "2ec5601a6e70ee9a971a",
+    "url": "/STOCKER-FE/static/js/2.eb3fbbba.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/STOCKER-FE/static/js/2.d8a2fc0a.chunk.js.LICENSE.txt"
+    "url": "/STOCKER-FE/static/js/2.eb3fbbba.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df5f42d49de14dfd7ebe",
-    "url": "/STOCKER-FE/static/js/main.16e55d70.chunk.js"
+    "revision": "671b9d1814f065e1d689",
+    "url": "/STOCKER-FE/static/js/main.708aea4e.chunk.js"
   },
   {
     "revision": "2567f3acdec22c3c0cd1",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2e99151be34fc08a908cfbfd01cea41f",
     "url": "/STOCKER-FE/static/media/guide4.2e99151b.png"
+  },
+  {
+    "revision": "5161f0cc6f27db3e74d3ff73dd94b067",
+    "url": "/STOCKER-FE/static/media/headerLogo.5161f0cc.png"
   },
   {
     "revision": "9018c49d88a7ad7fedec4148ee060e81",

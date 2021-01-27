@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/STOCKER-FE/static/js/main.16e55d70.chunk.js",
-    "main.js.map": "/STOCKER-FE/static/js/main.16e55d70.chunk.js.map",
+    "main.js": "/STOCKER-FE/static/js/main.708aea4e.chunk.js",
+    "main.js.map": "/STOCKER-FE/static/js/main.708aea4e.chunk.js.map",
     "runtime-main.js": "/STOCKER-FE/static/js/runtime-main.01cd7632.js",
     "runtime-main.js.map": "/STOCKER-FE/static/js/runtime-main.01cd7632.js.map",
     "static/css/2.4707e12a.chunk.css": "/STOCKER-FE/static/css/2.4707e12a.chunk.css",
-    "static/js/2.d8a2fc0a.chunk.js": "/STOCKER-FE/static/js/2.d8a2fc0a.chunk.js",
-    "static/js/2.d8a2fc0a.chunk.js.map": "/STOCKER-FE/static/js/2.d8a2fc0a.chunk.js.map",
+    "static/js/2.eb3fbbba.chunk.js": "/STOCKER-FE/static/js/2.eb3fbbba.chunk.js",
+    "static/js/2.eb3fbbba.chunk.js.map": "/STOCKER-FE/static/js/2.eb3fbbba.chunk.js.map",
     "index.html": "/STOCKER-FE/index.html",
-    "precache-manifest.a42ae5f6bb8a9048753e8dd7df76fe41.js": "/STOCKER-FE/precache-manifest.a42ae5f6bb8a9048753e8dd7df76fe41.js",
+    "precache-manifest.9022a2d2def54a247f567eef3a1ad715.js": "/STOCKER-FE/precache-manifest.9022a2d2def54a247f567eef3a1ad715.js",
     "service-worker.js": "/STOCKER-FE/service-worker.js",
     "static/css/2.4707e12a.chunk.css.map": "/STOCKER-FE/static/css/2.4707e12a.chunk.css.map",
     "static/css/main.5ecd60fb.chunk.css.map": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.d8a2fc0a.chunk.js.LICENSE.txt": "/STOCKER-FE/static/js/2.d8a2fc0a.chunk.js.LICENSE.txt",
+    "static/js/2.eb3fbbba.chunk.js.LICENSE.txt": "/STOCKER-FE/static/js/2.eb3fbbba.chunk.js.LICENSE.txt",
     "static/media/adsImg.png": "/STOCKER-FE/static/media/adsImg.62eba430.png",
     "static/media/como.png": "/STOCKER-FE/static/media/como.0c87f538.png",
     "static/media/data.png": "/STOCKER-FE/static/media/data.1a4eafa9.png",
     "static/media/ghAppIntro.png": "/STOCKER-FE/static/media/ghAppIntro.419e138f.png",
     "static/media/guide1.png": "/STOCKER-FE/static/media/guide1.e079f845.png",
     "static/media/guide4.png": "/STOCKER-FE/static/media/guide4.2e99151b.png",
+    "static/media/headerLogo.png": "/STOCKER-FE/static/media/headerLogo.5161f0cc.png",
     "static/media/home.png": "/STOCKER-FE/static/media/home.9018c49d.png",
     "static/media/koalakid.png": "/STOCKER-FE/static/media/koalakid.e1b0783e.png",
     "static/media/splash.png": "/STOCKER-FE/static/media/splash.0e740111.png",
@@ -30,8 +31,8 @@
   "entrypoints": [
     "static/js/runtime-main.01cd7632.js",
     "static/css/2.4707e12a.chunk.css",
-    "static/js/2.d8a2fc0a.chunk.js",
+    "static/js/2.eb3fbbba.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.16e55d70.chunk.js"
+    "static/js/main.708aea4e.chunk.js"
   ]
 }
