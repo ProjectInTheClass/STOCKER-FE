@@ -6,6 +6,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![App Store][appstore-shield]][appstore-url]
 
 <p align="center" width="100%">
   <img src="https://user-images.githubusercontent.com/46745325/103398279-5beb2900-4b7f-11eb-82bf-b28d2ad8532c.png"></img>
@@ -35,3 +36,5 @@
 [issues-url]: https://github.com/ProjectInTheClass/STOCKER-FE/issues
 [license-shield]: https://img.shields.io/github/license/ProjectInTheClass/STOCKER-FE.svg?style=flat&logo=appveyor
 [license-url]: https://github.com/ProjectInTheClass/STOCKER-FE/blob/master/LICENSE.txt
+[appstore-shield]: https://img.shields.io/itunes/v/1550061852?label=App%20Store&flat&logo=appveyor
+[appstore-url]: https://apps.apple.com/us/app/똑똑한-ai-펀드매니저-stocker/id1550061852
