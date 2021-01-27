@@ -34,6 +34,8 @@ const BrandContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   img {
     width: 4rem;
   }
@@ -152,38 +154,8 @@ const Header = () => {
             <img src={logoImg} />
             <a href="/">STOCKER</a>
           </BrandContainer>
-          <NavigationContainer>
-            {/* <li>회사소개</li>
-            <li>ES 가이드</li>
-            <li>Contact</li> */}
-            <li>
-              <ScrollTo>
-                {({ scroll }) => (
-                  <a onClick={() => scroll({ x: 0, y: 734 })}></a>
-                )}
-              </ScrollTo>
-            </li>
-            <li>
-              <ScrollTo>
-                {({ scroll }) => (
-                  <a onClick={() => scroll({ x: 0, y: 758 })}></a>
-                )}
-              </ScrollTo>
-            </li>
-          </NavigationContainer>
-          <NaviMenuBtn onClick={onToggle}>
-            <GiHamburgerMenu />
-          </NaviMenuBtn>
         </PageHeader>
       </HeaderLayoutContainer>
-      {open === true && y > 0 && (
-        <ToggleMenu>
-          {/* <li>회사소개</li>
-          <li>ES 가이드</li>
-          <li>Contact</li> */}
-        </ToggleMenu>
-      )}
-      {/* <MenuNavi /> */}
     </>
   );
 };
