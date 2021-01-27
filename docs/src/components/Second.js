@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import brandLogo from "../img/StockerLogo.png";
+import brandLogo from "../img/stockerLogo.png";
 import GhAppIntro from "../img/ghAppIntro.png";
 
 const Container = styled.div`

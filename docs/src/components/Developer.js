@@ -50,14 +50,6 @@ const SplashDesc = styled.div`
   }
 `;
 
-const Splah = styled.img`
-  width: 300px;
-  margin-right: 20px;
-  @media screen and (max-width: 767px) {
-    width: 150px;
-  }
-`;
-
 const BackgroundStyles = styled.div`
   width: 100%;
   height: 150px;
@@ -71,6 +63,18 @@ const DeveloperDesc = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 400px;
+
+  @media screen and (max-width: 1024px) {
+    width: 33%;
+  }
+`;
+
+const Splah = styled.img`
+  width: 300px;
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 const LinkGroup = styled.div`
@@ -78,6 +82,9 @@ const LinkGroup = styled.div`
   width: 150px;
   justify-content: space-around;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const Developer = () => {
