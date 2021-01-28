@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e7cf79249ec20824c04cc539938be51f",
+    "revision": "11a27d3010b4cfe26938391abd10b44c",
     "url": "/STOCKER-FE/index.html"
   },
   {
-    "revision": "d23e6d53da902d4c97a4",
+    "revision": "33006c2a9ba059925ce7",
     "url": "/STOCKER-FE/static/css/2.1161d34e.chunk.css"
   },
   {
-    "revision": "0ab6f93d153b46c59c0c",
+    "revision": "a99f4bf8be4abc6b5ecc",
     "url": "/STOCKER-FE/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "d23e6d53da902d4c97a4",
-    "url": "/STOCKER-FE/static/js/2.954fa61e.chunk.js"
+    "revision": "33006c2a9ba059925ce7",
+    "url": "/STOCKER-FE/static/js/2.1d59e887.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/STOCKER-FE/static/js/2.954fa61e.chunk.js.LICENSE.txt"
+    "url": "/STOCKER-FE/static/js/2.1d59e887.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0ab6f93d153b46c59c0c",
-    "url": "/STOCKER-FE/static/js/main.79f45d67.chunk.js"
+    "revision": "a99f4bf8be4abc6b5ecc",
+    "url": "/STOCKER-FE/static/js/main.bd751cf7.chunk.js"
   },
   {
     "revision": "e35673633cb96e636b9c",
