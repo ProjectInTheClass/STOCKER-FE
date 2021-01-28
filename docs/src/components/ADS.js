@@ -58,10 +58,15 @@ const RightComponent = styled.div`
   width: 600px;
   height: 300px;
 
+  img {
+    width: 300px;
+    height: 300px;
+  }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     width: 300px;
     img {
-      width: 300px;
+      width: 150px;
+      height: 150px;
     }
   }
 
