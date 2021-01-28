@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import StockerDataImage from "../img/data.png";
+import { Player } from "video-react";
+import HomeVideo from "../img/datavideo.mp4";
+import "../../node_modules/video-react/dist/video-react.css";
 
 const Container = styled.div`
   width: 100%;
@@ -57,6 +60,13 @@ const BackgroundStyles = styled.div`
   z-index: -1;
 `;
 
+const PlayerContainer = styled.div`
+  width: 300px;
+  @media screen and (max-width: 767px) {
+    width: 150px;
+  }
+`;
+
 const StockerData = () => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
@@ -71,7 +81,9 @@ const StockerData = () => {
           <p>- 지난 주차의 히스토리 기록</p>
           <p>- STOCKER AI 정확도를 한눈에 확인</p>
         </SplashDesc>
-        <Splah src={StockerDataImage} />
+        <PlayerContainer>
+          <Player playsInline src={HomeVideo} fluid={false} width={300} />
+        </PlayerContainer>
       </Contents>
     </Container>
   );

@@ -97,6 +97,7 @@ const MoreButton = styled.div`
   background-color: white;
   border: 1px solid #dee2e6;
   cursor: pointer;
+  z-index: 9999;
 
   &:hover {
     background-color: #f8f9fa;

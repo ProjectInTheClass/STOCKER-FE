@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import StockerHomeImage from "../img/home.png";
+import { Player } from "video-react";
+import HomeVideo from "../img/homevideo.mp4";
+import "../../node_modules/video-react/dist/video-react.css";
 
 const Container = styled.div`
   width: 100%;
@@ -49,6 +52,13 @@ const Splah = styled.img`
   }
 `;
 
+const PlayerContainer = styled.div`
+  width: 300px;
+  @media screen and (max-width: 767px) {
+    width: 150px;
+  }
+`;
+
 const BackgroundStyles = styled.div`
   width: 100%;
   height: 150px;
@@ -67,7 +77,9 @@ const StockerHome = () => {
     <Container>
       <BackgroundStyles />
       <Contents data-aos="fade-right">
-        <Splah src={StockerHomeImage} />
+        <PlayerContainer>
+          <Player playsInline src={HomeVideo} fluid={false} width={300} />
+        </PlayerContainer>
         <SplashDesc>
           <h2>STOCKER Home</h2>
           <p>- 누적 수익률과, 이번 주 수익률</p>
