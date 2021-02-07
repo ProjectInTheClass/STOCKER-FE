@@ -13,7 +13,7 @@ class StockerChartAPI {
     
     func getStockerChartData(stockCode : String ,completion : @escaping (Result<ChartData, Error>) -> Void){
         let decoder = JSONDecoder()
-        let url = "https://uiui.nashot.io/home/currentdata/"
+        let url = "http://everysports.iptime.org:5000/home/currentdata/"
         
         AF.request(url+stockCode).responseData(completionHandler: { respone in
             switch respone.result{

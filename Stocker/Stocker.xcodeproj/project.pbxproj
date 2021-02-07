@@ -42,6 +42,7 @@
 		EFA353DE25B9298000F5F2BE /* StockListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA353DD25B9298000F5F2BE /* StockListAPI.swift */; };
 		EFAA2A7F25C0F6E7003ADB47 /* GuideAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA2A7E25C0F6E7003ADB47 /* GuideAlertViewController.swift */; };
 		EFBE758E25B56EDA00783C27 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE758D25B56EDA00783C27 /* PaddingLabel.swift */; };
+		EFCF16B825CFD59B00D7F89A /* NonPrecitionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF16B725CFD59B00D7F89A /* NonPrecitionTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		EFA353DD25B9298000F5F2BE /* StockListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListAPI.swift; sourceTree = "<group>"; };
 		EFAA2A7E25C0F6E7003ADB47 /* GuideAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideAlertViewController.swift; sourceTree = "<group>"; };
 		EFBE758D25B56EDA00783C27 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		EFCF16B725CFD59B00D7F89A /* NonPrecitionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonPrecitionTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 				EF30B28725B13EE100D38E30 /* AppLogoTVC.swift */,
 				EF9AD6F025B5174F0063D76B /* PredictionTVC.swift */,
 				EF9AD6F325B5195D0063D76B /* PredictionTitleTVC.swift */,
+				EFCF16B725CFD59B00D7F89A /* NonPrecitionTVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3B302C25BEB5CF00192822 /* CustomInfoTVC.swift in Sources */,
+				EFCF16B825CFD59B00D7F89A /* NonPrecitionTVC.swift in Sources */,
 				BD627DCB25A4477000DCB0B4 /* DataController.swift in Sources */,
 				40B3D31725A6A86400F99C9E /* LogoVC.swift in Sources */,
 				EF30B29425B1507300D38E30 /* CumRevenueView.swift in Sources */,

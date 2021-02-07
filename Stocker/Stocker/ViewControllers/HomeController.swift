@@ -5,11 +5,15 @@ class HomeController: UIViewController, UITableViewDelegate {
         
     @IBOutlet weak var homeTableView: UITableView!
     
-    let identifiers : [String] = ["AppLogoTVC", "YieldTVC","PredictionTitleTVC", "PredictionTVC"]
-    let sections : [String] = ["Others1","Others2","Others3" ,"Estimate"]
+    var identifiers : [String] = ["AppLogoTVC", "YieldTVC","PredictionTitleTVC", "PredictionTVC"]
+    var sections : [String] = ["Others1","Others2","Others3" ,"Estimate"]
     let estivateSectionRows : [Int] = [0,1,2,3,4]
     var selected : [Bool] = [true,true,true,true,true]
-    
+    var nonStockData : Bool = false {
+        didSet{
+            self.identifiers = ["AppLogoTVC", "YieldTVC","PredictionTitleTVC", "NonPrecitionTVC"]
+        }
+    }
     var stockerEstimateList : [StockerEstimate] = [] {
         didSet{
             self.homeTableView.reloadData()
@@ -58,9 +62,11 @@ class HomeController: UIViewController, UITableViewDelegate {
                     lastPrice : data.lastPrice,
                     parsedLastPrice: parsedLastPrice
                 )
+                print(stockerEstimateItem)
                 self.stockerEstimateList.append(stockerEstimateItem)
             case .failure(let error):
                 print(error)
+                self.nonStockData = true
             }
         })
     }
@@ -92,10 +98,14 @@ extension HomeController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 3 {
-            return estivateSectionRows.count
-        } else {
+        if nonStockData == true{
             return 1
+        } else{
+            if section == 3 {
+                return estivateSectionRows.count
+            } else {
+                return 1
+            }
         }
     }
     
@@ -110,39 +120,44 @@ extension HomeController : UITableViewDataSource {
             cell.delegate = self
             return cell
         } else if indexPath.section == 3 {
-            let cell = self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.section], for: indexPath) as! PredictionTVC
+                if self.nonStockData == false {
+                let cell = self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.section], for: indexPath) as! PredictionTVC
 
-            cell.index = indexPath.row
-            cell.delegate = self
-            
-            if self.stockerEstimateList.count == 5 {
-                let listItem : StockerEstimate = self.stockerEstimateList[indexPath.row]
-                var lastTime : String =  String(Int(round(listItem.lastTime)))
-                lastTime.insert(":", at: lastTime.index(lastTime.endIndex, offsetBy: -2))
-                let maximumLastPrice : Double = listItem.lastPrice.max()!
-                                
-                let presentPrice = listItem.lastPrice[listItem.lastPrice.endIndex - 1]
+                cell.index = indexPath.row
+                cell.delegate = self
                 
-                let presentPriceRatio = calculateRatio((presentPrice / listItem.stockPrice) - 1)
-                let estimatePriceRatio = maximumLastPrice / listItem.stockEstimatePrice
-                cell.ratioValues = [presentPriceRatio, estimatePriceRatio]
-                
-                cell.stockCodeLabel.text = listItem.stockCode
-                cell.stockNameLabel.text = listItem.stockName
-                
-                cell.stockPriceLabel.text = decimalWon(Int(round(presentPrice)))
-                cell.stockEstimateLabel.text = decimalWon(Int(round(listItem.stockEstimatePrice)))
-                cell.lastTimeLabel.text = lastTime + " 기준"
-                cell.chartDataEntry = self.stockerEstimateList[indexPath.row].parsedLastPrice
-                cell.chartLimitLineProps = [self.stockerEstimateList[indexPath.row].stockEstimatePrice, maximumLastPrice]
-                
-                if !self.selected[indexPath.row] {
-                    cell.heightConstraint.constant = 300
-                } else {
-                    cell.heightConstraint.constant = 0
+                if self.stockerEstimateList.count == 5 {
+                    let listItem : StockerEstimate = self.stockerEstimateList[indexPath.row]
+                    var lastTime : String =  String(Int(round(listItem.lastTime)))
+                    lastTime.insert(":", at: lastTime.index(lastTime.endIndex, offsetBy: -2))
+                    let maximumLastPrice : Double = listItem.lastPrice.max()!
+                                    
+                    let presentPrice = listItem.lastPrice[listItem.lastPrice.endIndex - 1]
+                    
+                    let presentPriceRatio = calculateRatio((presentPrice / listItem.stockPrice) - 1)
+                    let estimatePriceRatio = maximumLastPrice / listItem.stockEstimatePrice
+                    cell.ratioValues = [presentPriceRatio, estimatePriceRatio]
+                    
+                    cell.stockCodeLabel.text = listItem.stockCode
+                    cell.stockNameLabel.text = listItem.stockName
+                    
+                    cell.stockPriceLabel.text = decimalWon(Int(round(presentPrice)))
+                    cell.stockEstimateLabel.text = decimalWon(Int(round(listItem.stockEstimatePrice)))
+                    cell.lastTimeLabel.text = lastTime + " 기준"
+                    cell.chartDataEntry = self.stockerEstimateList[indexPath.row].parsedLastPrice
+                    cell.chartLimitLineProps = [self.stockerEstimateList[indexPath.row].stockEstimatePrice, maximumLastPrice]
+                    
+                    if !self.selected[indexPath.row] {
+                        cell.heightConstraint.constant = 300
+                    } else {
+                        cell.heightConstraint.constant = 0
+                    }
                 }
-            }
-            return cell
+                return cell
+                } else {
+                    let cell = self.homeTableView.dequeueReusableCell(withIdentifier: "NonPrecitionTVC", for: indexPath) as! NonPrecitionTVC
+                    return cell
+                }
         } else {
             return  self.homeTableView.dequeueReusableCell(withIdentifier: identifiers[indexPath.row]) as! PredictionTitleTVC
         }
